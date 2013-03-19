@@ -1,0 +1,18 @@
+/* BOOSTRAP */
+@import "bootstrap-responsive";
+@import "bootstrap";
+
+/* VARIALBES & MIXIN */
+@import "variables";
+@import "mixins";
+
+/* CUSTOM */
+@import "bootstrap_overrides";
+@import "devis";
+@import "features";
+@import "gallery";
+@import "global-class";
+@import "home";
+@import "layout";
+@import "pricing";
+@import "scaffolds";
