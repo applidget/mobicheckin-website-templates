@@ -3,10 +3,14 @@
     <div id="top-main-heading">
       <div class="app-store-image">
         <a href="http://itunes.apple.com/en/app/mobicheckin/id510125877?mt=8">
-          {{ "get_apple_icons_url" || theme_image_tag: 'alt:Mobicheckin App' }}
+          {{ "apple-icons/available-appstore-en.png" || theme_image_tag: 'alt:Mobicheckin App' }}
         </a>
       </div>
-      <h1>{{ t ".home_title", :default  => "An app that checks your events SMARTLY & ACCURATELY" }} </h1>
+      <h1>
+        {% editable_short_text "home_title", hint: "home_title", priority: 1, fixed: true %}
+          Guest check-in made so chic and easy!
+        {% endeditable_short_text %}
+      </h1>
       <p class="intro" >{{ t ".intro_mobicheckin", :default  => "MobiCheckin is a SaaS platform for event organizers who want to monitor entries to their events." }} </p>
     </div>
       <div class="clear"></div>
