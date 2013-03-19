@@ -11,7 +11,11 @@
           Guest check-in made so chic and easy!
         {% endeditable_short_text %}
       </h1>
-      <p class="intro" >{{ t ".intro_mobicheckin", :default  => "MobiCheckin is a SaaS platform for event organizers who want to monitor entries to their events." }} </p>
+      <p class="intro" >
+        {% editable_short_text "intro_mobicheckin", hint: "intro_mobicheckin", priority: 1, fixed: true %}
+          MobiCheckin app helps you manage guest lists and entries on your events
+        {% endeditable_short_text %}
+      </p>
     </div>
       <div class="clear"></div>
       <div id="slideshow-text">
@@ -19,8 +23,16 @@
         </div>
         <div id="quick-action">
           <p>
-            {{ link_to t("try_demo"), APP_CONFIG['mobicheckin'] + "#{I18n.locale}/users/sign_in#auto_demo_sign_in", :class  => "btn btn-larger btn-quick-tour" }}
-            {{ link_to t("create_account"), APP_CONFIG['mobicheckin'] + "#{I18n.locale}/users/sign_up", :class  => "btn btn-info btn-larger" }}
+            <a href="https://app.mobicheckin.com/en/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
+              {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
+                Try Online Demo
+              {% endeditable_short_text %}
+            </a>
+            <a href="https://app.mobicheckin.com/en/users/sign_up" class="btn btn-info btn-larger">
+              {% editable_short_text "create_account", hint: "create_account", priority: 1, fixed: true %}
+                Sign up for Free
+              {% endeditable_short_text %}
+            </a>
           </p>
         </div>
       </div>
@@ -34,62 +46,94 @@
       <div id="slideshow-link" class="navigation">
         <ul class="thumbs noscript">
           <li>
-            {{ link_to image_tag("slideshow-image/thumbs/slide-1.png", :alt  => "Guest list for your event"), "assets/slideshow-image/slide-1.png", :class  => "thumb", :title  => "Title #1", :name => "presentation-1" }}
+            <a href="#presentation-1" class="thumb" title="Title #1" rel="history">
+              {{ "slideshow-image/thumbs/slide-1.png" || theme_image_tag: 'alt:Guest list for your event' }}
+            </a>
             <div class="caption">
               <div class="image-title">
-                <h3>{{ t ".mobichekin_first_slide_title", :default  => " MobiCheckin answers the question 1:"}}</h3>
+                <h3>
+                  {% editable_short_text "mobichekin_first_slide_title", hint: "mobichekin_first_slide_title", priority: 1, fixed: true %}
+                    MobiCheckin enables you to :
+                  {% endeditable_short_text %}
+                </h3>
               </div>
               <div class="image-desc">
-                {{ t ".first_slide_desc", :default  => "<ul>
-                  <li>Who currently attends my event? </li>
-                  <li>How many people are there in my event? </li>
-                  <li>Has Mrs. Doubtfire arrived yet? </li>
-                </ul>" }}
+                {% editable_long_text "first_slide_desc", hint: "first_slide_desc", priority: 1, fixed: true %}
+                  <ul>
+                    <li>Welcome guests on iPad and iPhone</li>
+                    <li>Manage guest lists, badges and invites online</li>
+                    <li>Monitor arrivals in real-time</li>
+                  </ul>
+                {% endeditable_long_text %}
               </div>
             </div>
           </li>
           <li>
-            {{ link_to image_tag("slideshow-image/thumbs/slide-2.png", :alt  => "MobiCheckin scan your guest badges with QR Codes"), "assets/slideshow-image/slide-2.png", :class  => "thumb", :title  => "Title #2", :name => "presentation-2" }}
+            <a href="#presentation-2" class="thumb" title="Title #2" rel="history">
+              {{ "slideshow-image/thumbs/slide-2.png" || theme_image_tag: 'alt:MobiCheckin scan your guest badges with QR Codes' }}
+            </a>
             <div class="caption">
               <div class="image-title">
-                <h3>{{ t ".mobichekin_second_slide_title", :default  => " MobiCheckin answers the question 2:"}}</h3>
+                <h3>
+                  {% editable_short_text "mobichekin_second_slide_title", hint: "mobichekin_second_slide_title", priority: 1, fixed: true %}
+                    Use your iDevice to :
+                  {% endeditable_short_text %}
+                </h3>
               </div>
               <div class="image-desc">
-                {{ t ".second_slide_desc", :default  => "<ul>
-                  <li>Who currently attends my event? </li>
-                  <li>How many people are there in my event? </li>
-                  <li>Has Mrs. Doubtfire arrived yet? </li>
-                </ul>" }}
+                {% editable_long_text "second_slide_desc", hint: "second_slide_desc", priority: 1, fixed: true %}
+                  <ul>
+                    <li>Check guest in the list on arrival</li>
+                    <li>Scan invitation QR code</li>
+                    <li>Select the point of entry</li>
+                  </ul>
+                {% endeditable_long_text %}
               </div>
             </div>
           </li>
           <li>
-            {{ link_to image_tag("slideshow-image/thumbs/slide-3.png", :alt  => "Excel import/export, custom badges."), "assets/slideshow-image/slide-3.png", :class  => "thumb", :title  => "Title #3", :name => "presentation-3" }}
+            <a href="#presentation-3" class="thumb" title="Title #3" rel="history">
+              {{ "slideshow-image/thumbs/slide-3.png" || theme_image_tag: 'alt:Excel import/export, custom badges' }}
+            </a>
             <div class="caption">
               <div class="image-title">
-                <h3>{{ t ".mobichekin_third_slide_title", :default  => " MobiCheckin answers the question 3:"}}</h3>
+                <h3>
+                  {% editable_short_text "mobichekin_third_slide_title", hint: "mobichekin_third_slide_title", priority: 1, fixed: true %}
+                    Prepare your guest list online :
+                  {% endeditable_short_text %}
+                </h3>
               </div>
               <div class="image-desc">
-                {{ t ".third_slide_desc", :default  => "<ul>
-                  <li>Who currently attends my event? </li>
-                  <li>How many people are there in my event? </li>
-                  <li>Has Mrs. Doubtfire arrived yet? </li>
-                </ul>" }}
+                {% editable_long_text "third_slide_desc", hint: "third_slide_desc", priority: 1, fixed: true %}
+                  <ul>
+                    <li>Easy import from XLS file</li>
+                    <li>Select badge and email templates</li>
+                    <li>Send email invitations with QR codes</li>
+                  </ul>
+                {% endeditable_long_text %}
               </div>
             </div>
           </li>
           <li>
-            {{ link_to image_tag("slideshow-image/thumbs/slide-4.png", :alt  => "Statistics, live feed of your event."), "assets/slideshow-image/slide-4.png", :class  => "thumb", :title  => "Title #3", :name => "presentation-4" }}
+            <a href="#presentation-4" class="thumb" title="Title #4" rel="history">
+              {{ "slideshow-image/thumbs/slide-4.png" || theme_image_tag: 'alt:Statistics, live feed of your event' }}
+            </a>
             <div class="caption">
               <div class="image-title">
-                <h3>{{ t ".mobichekin_fourth_slide_title", :default  => " MobiCheckin answers the question 4:"}}</h3>
+                <h3>
+                  {% editable_short_text "mobichekin_fourth_slide_title", hint: "mobichekin_fourth_slide_title", priority: 1, fixed: true %}
+                    Monitor your events smartly :
+                  {% endeditable_short_text %}
+                </h3>
               </div>
               <div class="image-desc">
-                {{ t ".fourth_slide_desc", :default  => "<ul>
-                  <li>Who currently attends my event? </li>
-                  <li>How many people are there in my event? </li>
-                  <li>Has Mrs. Doubtfire arrived yet?</li>
-                </ul>" }}
+                {% editable_long_text "fourth_slide_desc", hint: "fourth_slide_desc", priority: 1, fixed: true %}
+                  <ul>
+                    <li>Follow arrivals and attendance in real time</li>
+                    <li>Find out if a particular guest has showed up</li>
+                    <li>Precise stats of presence</li>
+                  </ul>
+                {% endeditable_long_text %}
               </div>
             </div>
           </li>
@@ -102,19 +146,27 @@
 <div id="content">
   <div id="body-intro">
     <div class ="container">
-      <h3>{{ t ".access_control_title", :default  => "MOBICHECKIN : ACCESS CONTROL ON THE IPHONE" }}</h3>
+      <h3>
+        {% editable_short_text "access_control_title", hint: "access_control_title", priority: 1, fixed: true %}
+          MOBICHECKIN : More than 150,000 Guests checked-in with MobiCheckin!
+        {% endeditable_short_text %}
+      </h3>
       <p>
-        {{ t ".access_control_para", :default  => "MobiCheckin is a solution online registration and access control on mobile for all event organizers. This solution allows you to:.Create your event. Invite your participants.Control access.Monitor statistics Access control is done on mobile (IPhone, IPod or IPad). It requires no technical staff on site and tou can use either your equipmeny or ours." }}
+        {% editable_long_text "access_control_para", hint: "access_control_para", priority: 1, fixed: true %}
+          MobiCheckin is your best friend when it comes to managing guest list prior to and during your event. With MobiCheckin you can smartly use iPads and iPhones to replace paper guest lists and old barcode scanners. It works both offline and online with as many devices as you need. Plus, on Mobicheckin.com you will be able to prepare your event, create guest categories, custom badges and email templates, and monitor arrivals in real-time.<br><br>
+          MobiCheckin Beta version has served over 100 events in Europe and already checked in more than 150,000 guests.<br><br>
+          Our customers are event organizers (corporate, leisure, congresses, exhibitions) desiring to streamline welcome desks with a new way of welcoming guests.
+        {% endeditable_long_text %}
       </p>
       <div class ="container in_the_field">
         <div class="row">
           <div class="span12">
-            {{ image_tag "in_the_field/hostess.jpg" }}
-            {{ image_tag "in_the_field/mobicheckin_scan.jpg" }}
-            {{ image_tag "in_the_field/badges.jpg" }}
-            {{ image_tag "in_the_field/bornes.jpg" }}
-            {{ image_tag "in_the_field/event.jpg" }}
-            {{ image_tag "in_the_field/ipads.jpg" }}
+            {{ "in_the_field/hostess.jpg" || theme_image_tag }}
+            {{ "in_the_field/mobicheckin_scan.jpg" || theme_image_tag }}
+            {{ "in_the_field/badges.jpg" || theme_image_tag }}
+            {{ "in_the_field/bornes.jpg" || theme_image_tag }}
+            {{ "in_the_field/event.jpg" || theme_image_tag }}
+            {{ "in_the_field/ipads.jpg" || theme_image_tag }}
           </div>
         </div>
       </div>
@@ -125,74 +177,149 @@
     <div class="row">
       <div class ="span4">
         <div class="description">
-          <h4>{{ t".online_restration", :default  => " ONLINE REGISTRATION" }}</h4>
+          <h4>
+            {% editable_short_text "online_restration", hint: "online_restration", priority: 1, fixed: true %}
+              Manage
+            {% endeditable_short_text %}
+          </h4>
           <div class ="content-image">
-            {{ image_tag("box-registration-image.png", :alt  => "mobicheckin box information on the registration")}}
+            {{ "box-registration-image.png" || theme_image_tag: 'alt:mobicheckin box information on the registration' }}
           </div>
-          <p class="content"> {{ t ".restration_access", :default  => "We generate a registration form with your graphic, allowing your visitors to register online by  entering their personal details to access the event. This recording generates a QR code ..." }}</p>
-          <p>{{ link_to t(".learn_more", :default  => "LEARN MORE"), pages_features_path(:anchor => "access_point"), :class => "btn btn-learn" }}</p>
+          <p class="content">
+            {% editable_long_text "restration_access", hint: "restration_access", priority: 1, fixed: true %}
+              Create your event online, and try our smart guest import to invite guests. Then send customized badges and email invitations with QR codes to your guests.
+            {% endeditable_long_text %}
+          </p>
+          <p>
+            <a href="/en/pages/features#access_point" class="btn btn-learn">
+              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                MORE ...
+              {% endeditable_short_text %}
+            </a>
+          </p>
         </div>
       </div>
       <div class ="span4">
         <div class="description">
-          <h4>{{ t ".application_mobil", :default  => "APPLICATION MOBILE ACCESS CONTROL" }} </h4>
+          <h4>
+            {% editable_short_text "application_mobil", hint: "application_mobil", priority: 1, fixed: true %}
+              Check-in
+            {% endeditable_short_text %}
+          </h4>
           <div class ="content-image">
-            {{ image_tag("box-access-image.png", :alt  => "mobicheckin box information on the access control")}}
+            {{ "box-access-image.png" || theme_image_tag: 'alt:mobicheckin box information on the access control' }}
           </div>
-          <p class="content"> {{ t ".quick_access_control", :default  => "This simple application allows your mobile hostesses a quick access control of your participants. This is done by reading the QR code generated during the registration process, and present on the badges."}}
+          <p class="content">
+            {% editable_long_text "quick_access_control", hint: "quick_access_control", priority: 1, fixed: true %}
+              Download your guest list and points of entry on your iPad or iPhone. Select your point of entry, and do the check-in. You can either scan your guest QR code, either find him or her in the list.
+            {% endeditable_long_text %}
           </p>
-          <p>{{ link_to t(".learn_more", :default  => "LEARN MORE"), pages_features_path(:anchor => "access_control"), :class => "btn btn-learn" }}</p>
+          <p>
+            <a href="/en/pages/features#access_control" class="btn btn-learn">
+              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                MORE ...
+              {% endeditable_short_text %}
+            </a>
+          </p>
         </div>
       </div>
       <div class ="span4 ">
         <div class="description last">
-          <h4>{{ t ".statistical_event", :default  => "STATISTICAL EVENT" }} </h4>
+          <h4>
+            {% editable_short_text "statistical_event", hint: "statistical_event", priority: 1, fixed: true %}
+              Monitor
+            {% endeditable_short_text %}
+          </h4>
           <div class ="content-image">
-            {{ image_tag("box-statistical-image.png", :alt  => "mobicheckin box information statistical")}}
+            {{ "box-statistical-image.png" || theme_image_tag: 'alt:mobicheckin box information statistical' }}
           </div>
-          <p class="content">{{ t ".data_access", :default  => " We will give you live on web and mobile, all data and statistics on visitors actually come to the show ( mean age, male / female ratio, number of guests actually came, arrival time..."}}
+          <p class="content">
+            {% editable_long_text "data_access", hint: "data_access", priority: 1, fixed: true %}
+              Monitor arrivals on your device, find guests who already checked-in, and get full analytics for your event.
+            {% endeditable_long_text %}
           </p>
-          <p>{{ link_to t(".learn_more", :default  => "LEARN MORE"), pages_features_path(:anchor => "statistics"), :class => "btn btn-learn" }}</p>
+          <p>
+            <a href="/en/pages/features#statistics" class="btn btn-learn">
+              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                MORE ...
+              {% endeditable_short_text %}
+            </a>
+          </p>
         </div>
       </div>
     </div>
   </div>
   </div>
-  <div id="testimonials">
-    <div class="container">
-    <% 
-        # partie témoignage de mobicheckin -->
-        # <!--  <div id="testimonials-content"></div> 
-        }}
-        <div class="clear"></div>
-      </div>
+</div>
+<div class ="container clients">
+  <h3>
+    {% editable_short_text "our_clients", hint: "our_clients", priority: 1, fixed: true %}
+      MobiCheckin is used by :
+    {% endeditable_short_text %}
+  </h3>
+  <div class="row">
+    <div class="span12">
+      <a href="http://www.apec.fr">
+        {{ "clients/apec.jpg" || theme_image_tag 'alt:apec' }}
+      </a>
+      <a href="http://www.gl-events.com">
+        {{ "clients/glevents.jpg" || theme_image_tag 'alt:glevents' }}
+      </a>
+      <a href="http://www.lepublicsysteme.com">
+        {{ "clients/lepublicsysteme.jpg" || theme_image_tag 'alt:lepublicsysteme' }}
+      </a>
+      <a href="http://www.essec.edu">
+        {{ "clients/essec.jpg" || theme_image_tag 'alt:essec' }}
+      </a>
+      <a href="http://www.escpeurope.eu">
+        {{ "clients/escp.jpg" || theme_image_tag 'alt:escp' }}
+      </a>
+      <a href="http://www.l4m.fr">
+        {{ "clients/l4m.jpg" || theme_image_tag 'alt:l4m' }}
+      </a>
+      <a href="http://www.careerbuilder.com">
+        {{ "clients/careerbuilder.jpg" || theme_image_tag 'alt:careerbuilder' }}
+      </a>
+      <a href="http://www.arittcentre.fr">
+        {{ "clients/aritt.jpg" || theme_image_tag 'alt:aritt' }}
+      </a>
+      <a href="http://www.bfair.fr">
+        {{ "clients/bfair.jpg" || theme_image_tag 'alt:bfair' }}
+      </a>
+      <a href="http://www.centrefrance-evenements.com">
+        {{ "clients/centrefranceevenements.jpg" || theme_image_tag 'alt:centrefranceevenements' }}
+      </a>
+      <a href="http://www.groupesolutions.fr">
+        {{ "clients/infopromotions.jpg" || theme_image_tag 'alt:infopromotions' }}
+      </a>
+      <a href="http://www.spas-expo.com">
+        {{ "clients/spas.jpg" || theme_image_tag 'alt:spas' }}
+      </a>
+      <a href="http://www.binsfeld.lu">
+        {{ "clients/binsfeld.jpg" || theme_image_tag 'alt:binsfeld' }}
+      </a>
+      <a href="http://www.ey.com">
+        {{ "clients/ernst&young.jpg" || theme_image_tag 'alt:ernst&young' }}
+      </a>
+      <a href="http://www.optic2000.com">
+        {{ "clients/optic2000.jpg" || theme_image_tag 'alt:optic2000' }}
+      </a>
+      <a href="http://www.openhive.eu">
+        {{ "clients/openhive.jpg" || theme_image_tag 'alt:openhive' }}
+      </a>
+      <a href="http://www.starwoodhotels.com">
+        {{ "clients/starwood.jpg" || theme_image_tag 'alt:starwood' }}
+      </a>
+      <a href="http://www.magicgarden-agency.com">
+        {{ "clients/magicgarden.jpg" || theme_image_tag 'alt:magicgarden' }}
+      </a>
+      <a href="http://www.agencenewyork.fr">
+        {{ "clients/agencenewyork.jpg" || theme_image_tag 'alt:agencenewyork' }}
+      </a>
+      <a href="http://www.sensation.fr">
+        {{ "clients/sensation.jpg" || theme_image_tag 'alt:sensation' }}
+      </a>
     </div>
   </div>
-  <div class ="container clients">
-    <h3>{{ t ".our_clients", :default => "Our clients" }}</h3>
-    <div class="row">
-      <div class="span12">
-        {{ client_link "apec", "http://www.apec.fr" }}
-        {{ client_link "glevents", "http://www.gl-events.com" }}
-        {{ client_link "lepublicsysteme", "http://www.lepublicsysteme.com" }}
-        {{ client_link "essec", "http://www.essec.edu" }}
-        {{ client_link "escp", "http://www.escpeurope.eu" }}
-        {{ client_link "l4m", "http://www.l4m.fr" }}
-        {{ client_link "careerbuilder", "http://www.careerbuilder.com" }}
-        {{ client_link "aritt", "http://www.arittcentre.fr" }}
-        {{ client_link "bfair", "http://www.bfair.fr" }}
-        {{ client_link "centrefranceevenements", "http://www.centrefrance-evenements.com" }}
-        {{ client_link "infopromotions", "http://www.groupesolutions.fr" }}
-        {{ client_link "spas", "http://www.spas-expo.com" }}
-        {{ client_link "binsfeld", "http://www.binsfeld.lu" }}
-        {{ client_link "ernst&young", "http://www.ey.com" }}
-        {{ client_link "optic2000", "http://www.optic2000.com" }}
-        {{ client_link "openhive", "http://www.openhive.eu" }}
-        {{ client_link "starwood", "http://www.starwoodhotels.com" }}
-        {{ client_link "magicgarden", "http://www.magicgarden-agency.com" }}
-        {{ client_link "agencenewyork", "http://www.agencenewyork.fr" }}
-        {{ client_link "sensation", "http://www.sensation.fr" }}
-      </div>
-    </div>
-  </div>
+</div>
 </div>
