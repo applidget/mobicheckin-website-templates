@@ -1,0 +1,76 @@
+#mc-embedded-subscribe{
+	color:white;
+	border:none;
+}
+.btn-more{
+	color:$pricing-color;
+	font-weight:bold;
+	padding:1em;
+	&:hover{
+		color:darken($pricing-color, 20%);
+	}
+}
+.btn-pricing {
+  width: 60%;
+}
+.btn-info{
+	padding:0.6em;
+}
+.btn-contact{
+	margin-top:1em;
+	padding:0.6em;
+	text-align:center;
+	float:right;
+	font-weight:bold;	
+}
+.btn-sign{
+	font-weight:bold;
+	padding:0.6em;
+}
+.btn-newsletter{
+	font-weight:bold;
+	padding:0.4em;
+}
+.btn-larger{
+	padding:1em;
+	margin:0.5em;
+	text-align:center;
+	font-weight:bold;
+	width:150px;
+	margin-bottom:1.5em;
+	font-size:15px;	
+}
+.btn-quick-tour{
+	color:#777;
+	font-weight:bold;
+	&:hover{
+		color:#555;
+	}
+}
+.clear{
+	clear:both;
+}
+.input-contact{
+	width:285px;
+	border-color: $footer-text;
+	color:$footer-title;
+	margin:0.7em 0;
+	background-color:$input-color;
+}
+
+.textarea-contact{
+	width:285px;
+	height:50px;
+	color:$footer-title;
+	border-color: $footer-text;
+	margin:1em 0;
+	background-color:$input-color;
+}
+
+.input-newsletter{
+	margin:0;
+	width:170px;
+	color:$footer-title;
+	border-color: $footer-text;
+	background-color:$input-color;
+}

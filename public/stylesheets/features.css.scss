@@ -1,0 +1,42 @@
+#features{
+	background:url(body-background.png) repeat;
+	h1{
+		margin:1em 0 0.4em 15px;
+	}
+	.feature {
+    padding: 3em 0;
+		border-top:1px solid darken($global-border, 30%);
+
+    .right {
+      text-align: right;
+    }
+		.content{
+			text-align:justify;
+			h2{
+				margin-bottom:0.2em;
+				color:#333;
+			}
+			a {
+				text-decoration:underline;
+			}
+
+			p {
+				color:#555;
+				font-size:12px;
+				margin-bottom:1em;
+				strong{
+					font-size:15px;
+					color:gray;
+				}
+			}
+		}
+		.drop-shadow {
+			padding:8px;
+			background-color: white;
+			border: 1px solid $global-border;		
+		}
+	}
+	.last{
+		border-bottom:none;
+	}
+}

@@ -1,0 +1,132 @@
+#header {
+	@include background-center(header-background);
+	padding-top:3em;
+	height:405px;
+	@include block-center;
+	#top-main-heading{
+		h1{
+			margin-bottom:0.4em;
+		}
+		.intro{
+			font-size:14px;
+		}
+		p{
+			margin-bottom:2em;
+		}
+	}
+	#slideshow-text{
+		width:370px;
+		margin-bottom:1em;
+		float:left;
+		#caption{
+			width:auto;
+			.image-title{
+				h3{
+					font-weight:inherit;
+					white-space: nowrap;
+				}
+			}
+			.image-desc{
+				ul{
+					margin:0;
+					padding:0;
+					margin-top:1em;
+					li{
+            font-size: 15px;
+						margin:0.1em;
+						white-space: nowrap;
+						list-style:none;
+						padding:6px 0 4px 32px;
+						background: url(slideshow-image/liste-style.png) no-repeat;
+						background-position: left center;	
+					}			
+				}
+			}
+		}
+		#quick-action{
+			p{
+				width:auto;
+				margin-top:160px;
+				white-space: nowrap;
+			}
+		}
+	}
+	#slideshow-image{
+		float:right;
+	}
+}
+
+#content {
+	#body-intro{
+		p{
+			margin-top:1em;
+		}
+	}
+	#box{
+		background-image:url(box-background.jpg);
+		background-size:120%;
+		background-repeat:no-repeat;
+		background-color:#F9F9F9;
+		margin-top:3em;
+		padding-top:3em;
+		padding-bottom:1em;
+		.last{
+			border-right:1px solid #eee;
+			padding-right:20px;
+		}
+		.description{
+			padding-left:20px;
+			margin:0;
+			border-left:1px solid #eee;
+			h4{
+				text-align:center;
+				height:30px;
+			}
+			.content-image{
+				width:150px;
+				@include block-center;
+			}
+			p.content{
+				text-align: justify;
+				width:auto;
+				min-height:110px;
+			}
+			p:last-child{
+				text-align:right;
+				height:auto;
+				.btn-learn{
+					color:#205a88;
+				}
+			}
+		}
+	}
+}
+#testimonials{
+	margin-bottom:2em;
+	padding-bottom:1.1em;
+	background-image:url(testimonials-ombre.png);
+	background-repeat:no-repeat;
+	background-position:bottom; 
+	#testimonials-content{
+		padding:2em;
+		border:1px solid #eee;
+		@include background_gradient(0,center,#fefefe, 33, #eee, 80);
+		@include border-radius(1em);
+		p{
+			float:left;
+			width:600px;
+		}
+		.profile{
+			padding:0;
+			float:right;
+			width:234px;
+			p{
+				padding-top: 50px;
+				width:150px;
+				strong{
+					color:#004066;
+				}
+			}
+		}
+	}
+}

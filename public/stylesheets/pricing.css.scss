@@ -1,0 +1,148 @@
+#pricing {
+	padding:2em;
+
+	h1, .pro-pricing-paragraph{
+    margin: 0.8em auto 0.6em auto;
+    width: 738px;
+	}
+
+  .plan-container {
+    margin: auto;
+    width: 770px;
+    #top {
+      background-color: black;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: #FFFFFF;
+      height: 60px;
+      width: 740px;
+    }
+    .plan.first {
+      padding-left: 346px;
+    }
+    .plan {
+      float: left;
+      height: 48px;
+      padding-top: 4px;
+      text-align: center;
+      width: 130px;
+      h3 {
+        color: white;
+        font-size: 16px;
+      }
+      p {
+        color: silver;
+        font-size: 11px;
+      }
+    }
+    .pricing-row {
+      border: 1px solid #E0E0E0;
+      border-top: none;
+      float: left;
+      width: 738px;
+      background-color: white;
+    }
+    .action-call-row {
+      width: 740px;
+      background-color: black;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      float: left;
+      height: 85px;
+      .column {
+        border: none;
+        width: 131px;
+        padding: 1em 0;
+      }
+      .btn {
+        width: 100px;
+      }
+      h3 {
+        color: white;
+        font-size: 16px;
+      }
+    }
+    .feature {
+      color: #222222;
+      float: left;
+      font-size: 12px;
+      line-height: 34px;
+      padding-right: 14px;
+      text-align: right;
+      width: 330px;
+    }
+    .column {
+      border-left: 1px solid #E0E0E0;
+      float: left;
+      font-size: 12px;
+      height: 34px;
+      line-height: 34px;
+      line-height: 34px;
+      text-align: center;
+      width: 130px;
+    }
+    .yes, .no {
+      text-indent: -9999px;
+      background: url('yesno.png');
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: -7px;
+    }
+    .no {
+      background-position: -16px 0;
+      vertical-align: -9px;
+    }
+    i {
+      vertical-align: -2px;
+    }
+  }
+  .technology-table-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    margin: 2em 0;
+    width: 740px;
+  }
+  .technology-table {
+    th {
+      background-color: #eee;
+    }
+    td {
+      background-color: white;
+    }
+    .credits-used {
+      width: 200px;
+      text-align: center;
+    }
+  }
+  .pricing-table, .technology-table {
+    width: 740px;
+  }
+  .pricing-table-container {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    width: 740px;
+  }
+  .pricing-table {
+    margin-bottom: 0;
+    td {
+      text-align: right;
+      background-color: white;
+    }
+    th {
+      background-color: #eee;
+      color: #222;
+    }
+  }
+  .call-to-action {
+    text-align: center;
+    .btn {
+      font-size: 18px;
+      line-height: 42px;
+      margin: 4em 0;
+      padding: 0 1em;
+    }
+  }
+}

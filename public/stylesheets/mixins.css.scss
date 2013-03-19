@@ -1,0 +1,165 @@
+@mixin box-shadow($a: 1px, $b: 1px, $c: 1px, $color: #fff) {
+ -moz-box-shadow: $a $b $c $color; 
+  -webkit-box-shadow: $a $b $c $color; 
+  box-shadow: $a $b $c $color;
+}
+
+@mixin box-shadow($a, $b, $c, $color){
+	-moz-box-shadow: $a $b $c $color;
+	-webkit-box-shadow: $a $b $c $color;
+	box-shadow: $a $b $c $color;
+}
+
+@mixin block-center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin rotate($rotate: 180deg) {
+	/*permet de effectuer une rotation*/
+	@if unitless($rotate) {
+		@warn "Attention #{$rotate} doit etre en deg";
+		$rotate:#{$rotate}deg;
+	}
+	-moz-transform: rotate($rotate);
+	-webkit-transform: rotate($rotate);
+	-o-transform: rotate($rotate);
+	-ms-transform: rotate($rotate);
+	transform: rotate($rotate);
+}
+
+@mixin background-position($image, $position: center, $extension: png){
+	/*insert l'image a l'endroit voulu (les . ne st pas gérer par sass d où la décomposition)*/
+	background-image:url(#{$image}.#{$extension});
+	background-repeat:no-repeat;
+	background-position:$position;
+}
+@mixin scale($scale: 1){
+	/*permet déloigner ou de raprocher la div $scale compris entre 0.1 et 2*/
+	@if $scale > 2 {
+		$scale: 1;
+	} @else if $scale <= 0 {
+		$scale: 1;
+	}
+	-moz-transform: scale($scale);
+	-webkit-transform: scale($scale);
+	-o-transform: scale($scale);
+	-ms-transform: scale($scale);
+	transform: scale($scale);
+}
+
+@mixin translate($trans_hori: 0px, $trans_vert: 0px) {
+	/*permet défectuer une translation*/
+	@if unitless($trans_hori) {
+		@warn "Attention #{$trans_hori} doit etre en px ou em";
+		$trans_hori:#{$trans_hori}px;
+	}
+	@if unitless($trans_vert) {
+		@warn "Attention #{$trans_vert} doit etre en px ou em";
+		$trans_vert: #{$trans_vert}px
+	}
+	-moz-transform: translate($trans_hori, $trans_vert);
+	-webkit-transform: translate($trans_hori, $trans_vert);
+	-o-transform: translate($trans_hori, $trans_vert);
+	-ms-transform: translate($trans_hori, $trans_vert);
+	transform: translate($trans_hori, $trans_vert);
+}
+
+@mixin skew($skew_a: 0deg, $skew_b: Odeg){
+	/*permet de deformer la div*/
+	@if unitless($skew_a) {
+		@warn "Attention #{$skew_a} doit etre en deg";
+		$skew_a:#{$skew_a}deg;
+	}
+	@if unitless($skew_b) {
+		@warn "Attention #{$skew_b} doit etre en deg";
+		$skew_b:#{$skew_b}deg;
+	}
+	-moz-transform: skew($skew_a, $skew_b);
+	-webkit-transform: skew($skew_a, $skew_b);
+	-o-transform: skew($skew_a, $skew_b);
+	-ms-transform: skew($skew_a, $skew_b);
+	transform: skew($skew_a, $skew_b);
+}
+
+@mixin add-image-on-li($image, $mode: 0, $largeur-img:4, $hauteur-img:2, $margin: -1){
+	/* permet d'ajouter une image à un li */
+	/*en definissant none comme nom d'image li n'aurra pas de liste style*/
+	@if $image == "none"{
+		list-style:none;
+		background-image:none;
+	}@else{
+		/* 2 mode */
+		@if $mode == 1 {
+			/*ajouter en fond*/
+			@if $margin == -1 {
+				$margin: 5;
+			}
+			
+			list-style:none;
+			padding:#{$hauteur-img/3}px #{$hauteur-img/2}px 0 #{$largeur-img+$margin}px;
+			background: url(#{$image}.png) no-repeat;
+			background-position: left center;
+			background-size:#{$largeur-img}px #{$hauteur-img}px;
+
+		} @else {
+			/*mode par defaut ajouter directement sur la puce*/	
+			list-style-image: url(#{$image}.png);
+		}	
+	}
+}
+
+@mixin background-center($image){
+	/*permet de centrer l'inmage  de fond l image est toujours centrer quelque soit la taille du navigateur */
+	background: url(#{$image}.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.#{$image}.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$image}.jpg', sizingMethod='scale')";
+}
+
+@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-right){
+	/*permet d'arrondir les div */
+	-moz-border-radius: #{$top-left} #{$top-right} #{$bottom-right} #{$bottom-left};
+	-webkit-border-radius: #{$top-left} #{$top-right} #{$bottom-right} #{$bottom-left};
+	border-radius: #{$top-left} #{$top-right} #{$bottom-right} #{$bottom-left};
+}
+
+@mixin background_gradient($mode, $position, $color_a, $filtre_a, $color_b, $filtre_b){
+	/*permet d'effectuer un degrader sur la div */
+	
+	/*la variable filtre_a permet de definir le niveau d'intensite de la couleur a */
+	@if unitless($filtre_a) {
+		@warn "Attention #{$filtre_a} doit etre en %";
+		$filtre_a:5%;
+	}
+	/*même chose que filtre a sauf que c'est pour la couleur b*/
+	@if unitless($filtre_b) {
+		@warn "Attention #{$filtre_b} doit etre en %";
+		$filtre_b:95%;
+	}
+	
+	/* possede 2 mode le mode permet un degrader radial*/
+	@if $mode == 1 {
+  		background: $color_a; /* Old browsers */
+			background: -moz-radial-gradient($position, ellipse cover, $color_b 0%,  $color_b $filtre_a, $color_a $filtre_b, $color_a 100%); /* FF3.6+ */
+			background: -webkit-gradient(radial, $position $position, 0px, $position $position, 100%, color-stop(0%,$color_b), color-stop($filtre_a,$color_b), color-stop($filtre_b,$color_a), color-stop(100%,$color_a)); /* Chrome,Safari4+ */
+			background: -webkit-radial-gradient($position, ellipse cover, $color_b 0%, $color_b $filtre_a, $color_a $filtre_b, $color_a 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-radial-gradient($position, ellipse cover, $color_b 0%, $color_b $filtre_a, $color_a $filtre_b, $color_a 100%); /* Opera 12+ */
+			background: -ms-radial-gradient($position, ellipse cover, $color_b 0%, $color_b $filtre_a, $color_a $filtre_b, $color_a 100%); /* IE10+ */
+			background: radial-gradient($position, ellipse cover, $color_b 0%, $color_b $filtre_a, $color_a $filtre_b, $color_a 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color_a, endColorstr=$color_b,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	} @else {
+		/*mode par defaut permet un degrader lineaire*/
+			background: $color_a; /* Old browsers */
+			background: -moz-linear-gradient($position, $color_a 5%, $color_a $filtre_a, $color_b $filtre_b, $color_b 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, $position top, $position bottom, color-stop(5%,$color_a), color-stop($filtre_a,$color_a), color-stop($filtre_b,$color_b), color-stop(100%,$color_b)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient($position, $color_a 5%,$color_a $filtre_a,$color_b $filtre_b,$color_b 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient($position, $color_a 5%,$color_a $filtre_a,$color_b $filtre_b,$color_b 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient($position, $color_a 5%,$color_a $filtre_a,$color_b $filtre_b,$color_b 100%); /* IE10+ */
+			background: linear-gradient($position, $color_a 5%,$color_a $filtre_a,$color_b $filtre_b,$color_b 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color_a, endColorstr=$color_b,GradientType=0 ); /* IE6-9 */
+	}
+}

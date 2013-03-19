@@ -1,0 +1,97 @@
+div.gallery {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	display: none;
+	float: right;
+	width: 550px; 
+}
+div.gallery a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+div.gallery a:focus, div.gallery a:hover, div.gallery a:active {
+	text-decoration: underline;
+}
+div.slideshow-container {
+	position: relative;
+	clear: both;
+	height: 350px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include background-position(loader, center, gif);
+	width: 550px;
+}
+div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.slideshow a.advance-link {
+	display: block;
+	width: 550px;
+	line-height: 340px; /* This should be set to be at least the height of the largest image in the slideshow */
+	text-align: center;
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+
+div.slideshow img {
+	vertical-align: middle;
+	width:520px;
+}
+div.download {
+	float: right;
+}
+
+ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 10px 5px 0;
+	list-style: none;
+	@include background-position(slideshow-image/thumbs/thumb-ombre, bottom);
+}
+a.thumb {
+	padding: 2px;
+	min-height:40px;
+	display: block;
+}
+
+a.thumb img{
+	margin-bottom:5px;
+}
+
+ul.thumbs li.selected a.thumb img {
+	@include translate(0px, -1em);
+}
+
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	width:100%;
+	display: block;
+}
+div.pagination {
+	clear: both;
+	display:none;
+}
+div.caption-container, span.image-caption {
+	min-width: 334px;
+	display: block;
+	position: absolute;
+}
+
+div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}
