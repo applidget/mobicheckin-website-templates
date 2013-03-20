@@ -1,7 +1,7 @@
 site:
   name: mobicheckin-website
 
-  locales: [en, fr, de]
+  locales: [en, fr]
 
   seo_title: mobicheckin-website
   meta_keywords: "some meta keywords"
@@ -11,5 +11,18 @@ site:
     - "index": # page path (the template can edited here app/views/pages/index.liquid)
         title: "Home page"
         published: true
+    - "features" :
+        title: "Features"
+        published: true
+    - "events" :
+        title: "Events"
+        published: false
+    - "pricing" :
+        title: "Pricing"
+        published: true
+    - "devis" :
+        title: "Devis"
+        published: true
     - "404":
         title: "Page not found"
+        published: true

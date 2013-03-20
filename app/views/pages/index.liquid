@@ -1,325 +1,435 @@
-<div id="header">
-  <div class="container">
-    <div id="top-main-heading">
-      <div class="app-store-image">
-        <a href="http://itunes.apple.com/en/app/mobicheckin/id510125877?mt=8">
-          {{ "apple-icons/available-appstore-en.png" || theme_image_tag: 'alt:Mobicheckin App' }}
-        </a>
-      </div>
-      <h1>
-        {% editable_short_text "home_title", hint: "home_title", priority: 1, fixed: true %}
-          Guest check-in made so chic and easy!
-        {% endeditable_short_text %}
-      </h1>
-      <p class="intro" >
-        {% editable_short_text "intro_mobicheckin", hint: "intro_mobicheckin", priority: 1, fixed: true %}
-          MobiCheckin app helps you manage guest lists and entries on your events
-        {% endeditable_short_text %}
-      </p>
-    </div>
-      <div class="clear"></div>
-      <div id="slideshow-text">
-        <div id="caption" class="caption-container">  
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ site.seo_title }}</title>
+    
+    <meta charset="utf-8">
+    <meta name="description" content="{{ site.meta_description }}">
+    <meta name="author" content="Mobicheckin">
+    <meta name="google-site-verification" content="lSur_uNy6-JQcjknKQ2NtDSuWNMqF-mRz28tPyqLPk0" />
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- <link rel="canonical" href="<%= #{request.protocol}#{request.host_with_port}#{request.fullpath} %>" /> -->
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="http://fonts.googleapis.com/css?family=Belgrano" rel="stylesheet" type="text/css">
+
+    {{ 'application' | stylesheet_tag }}
+  </head>
+  <body>
+    <div id="top-bar" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/">
+            {{ "mobicheckin_logo.png" || theme_image_tag: 'alt:MobiCheckin' }}
+          </a>
+          <ul class="nav">
+            {% nav site, no_wrapper: true, active_class: 'active' %}
+            
+            <li><a href="https://applidget.zendesk.com/categories/20054196-mobicheckin?locale=1" target="_blank">Support</a></li>
+            <li><a href="http://blog.mobicheckin.com/">Blog</a></li>
+            <li><strong><a href="https://app.mobicheckin.com/en/users/sign_up">Sign up</a></strong></li>
+            <li><a href="https://app.mobicheckin.com/en/users/sign_in">Sign in</a></li>
+            
+          </ul>
         </div>
-        <div id="quick-action">
-          <p>
-            <a href="https://app.mobicheckin.com/en/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
-              {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
-                Try Online Demo
-              {% endeditable_short_text %}
+      </div>
+    </div>
+    <div id="header">
+      <div class="container">
+        <div id="top-main-heading">
+          <div class="app-store-image">
+            <a href="http://itunes.apple.com/en/app/mobicheckin/id510125877?mt=8">
+              {{ "apple-icons/available-appstore-en.png" || theme_image_tag: 'alt:Mobicheckin App' }}
             </a>
-            <a href="https://app.mobicheckin.com/en/users/sign_up" class="btn btn-info btn-larger">
-              {% editable_short_text "create_account", hint: "create_account", priority: 1, fixed: true %}
-                Sign up for Free
-              {% endeditable_short_text %}
-            </a>
+          </div>
+          <h1>
+            {% editable_short_text "home_title", hint: "home_title", priority: 1, fixed: true %}
+              Guest check-in made so chic and easy!
+            {% endeditable_short_text %}
+          </h1>
+          <p class="intro" >
+            {% editable_short_text "intro_mobicheckin", hint: "intro_mobicheckin", priority: 1, fixed: true %}
+              MobiCheckin app helps you manage guest lists and entries on your events
+            {% endeditable_short_text %}
           </p>
         </div>
-      </div>
-      <div id="slideshow-image" class="gallery">
-        <div class="slideshow-container">
-          <div id="loading" class="loader"></div>
-          <div id="slideshow" class="slideshow"></div>
+          <div class="clear"></div>
+          <div id="slideshow-text">
+            <div id="caption" class="caption-container">  
+            </div>
+            <div id="quick-action">
+              <p>
+                <a href="https://app.mobicheckin.com/en/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
+                  {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
+                    Try Online Demo
+                  {% endeditable_short_text %}
+                </a>
+                <a href="https://app.mobicheckin.com/en/users/sign_up" class="btn btn-info btn-larger">
+                  {% editable_short_text "create_account", hint: "create_account", priority: 1, fixed: true %}
+                    Sign up for Free
+                  {% endeditable_short_text %}
+                </a>
+              </p>
+            </div>
+          </div>
+          <div id="slideshow-image" class="gallery">
+            <div class="slideshow-container">
+              <div id="loading" class="loader"></div>
+              <div id="slideshow" class="slideshow"></div>
+            </div>
+          </div>
+          
+          <div id="slideshow-link" class="navigation">
+            <ul class="thumbs noscript">
+              <li>
+                <a href="/images/slideshow-image/slide-1.png" class="thumb" title="Title #1" rel="history" name="presentation-1">
+                  {{ "slideshow-image/thumbs/slide-1.png" || theme_image_tag: 'alt:Guest list for your event' }}
+                </a>
+                <div class="caption">
+                  <div class="image-title">
+                    <h3>
+                      {% editable_short_text "mobichekin_first_slide_title", hint: "mobichekin_first_slide_title", priority: 1, fixed: true %}
+                        MobiCheckin enables you to :
+                      {% endeditable_short_text %}
+                    </h3>
+                  </div>
+                  <div class="image-desc">
+                    {% editable_long_text "first_slide_desc", hint: "first_slide_desc", priority: 1, fixed: true %}
+                      <ul>
+                        <li>Welcome guests on iPad and iPhone</li>
+                        <li>Manage guest lists, badges and invites online</li>
+                        <li>Monitor arrivals in real-time</li>
+                      </ul>
+                    {% endeditable_long_text %}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="/images/slideshow-image/slide-2.png" name="presentation-2" class="thumb" title="Title #2" rel="history">
+                  {{ "slideshow-image/thumbs/slide-2.png" || theme_image_tag: 'alt:MobiCheckin scan your guest badges with QR Codes' }}
+                </a>
+                <div class="caption">
+                  <div class="image-title">
+                    <h3>
+                      {% editable_short_text "mobichekin_second_slide_title", hint: "mobichekin_second_slide_title", priority: 1, fixed: true %}
+                        Use your iDevice to :
+                      {% endeditable_short_text %}
+                    </h3>
+                  </div>
+                  <div class="image-desc">
+                    {% editable_long_text "second_slide_desc", hint: "second_slide_desc", priority: 1, fixed: true %}
+                      <ul>
+                        <li>Check guest in the list on arrival</li>
+                        <li>Scan invitation QR code</li>
+                        <li>Select the point of entry</li>
+                      </ul>
+                    {% endeditable_long_text %}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="/images/slideshow-image/slide-3.png" name="presentation-3" class="thumb" title="Title #3" rel="history">
+                  {{ "slideshow-image/thumbs/slide-3.png" || theme_image_tag: 'alt:Excel import/export, custom badges' }}
+                </a>
+                <div class="caption">
+                  <div class="image-title">
+                    <h3>
+                      {% editable_short_text "mobichekin_third_slide_title", hint: "mobichekin_third_slide_title", priority: 1, fixed: true %}
+                        Prepare your guest list online :
+                      {% endeditable_short_text %}
+                    </h3>
+                  </div>
+                  <div class="image-desc">
+                    {% editable_long_text "third_slide_desc", hint: "third_slide_desc", priority: 1, fixed: true %}
+                      <ul>
+                        <li>Easy import from XLS file</li>
+                        <li>Select badge and email templates</li>
+                        <li>Send email invitations with QR codes</li>
+                      </ul>
+                    {% endeditable_long_text %}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="/images/slideshow-image/slide-4.png" name="presentation-4" class="thumb" title="Title #4" rel="history">
+                  {{ "slideshow-image/thumbs/slide-4.png" || theme_image_tag: 'alt:Statistics, live feed of your event' }}
+                </a>
+                <div class="caption">
+                  <div class="image-title">
+                    <h3>
+                      {% editable_short_text "mobichekin_fourth_slide_title", hint: "mobichekin_fourth_slide_title", priority: 1, fixed: true %}
+                        Monitor your events smartly :
+                      {% endeditable_short_text %}
+                    </h3>
+                  </div>
+                  <div class="image-desc">
+                    {% editable_long_text "fourth_slide_desc", hint: "fourth_slide_desc", priority: 1, fixed: true %}
+                      <ul>
+                        <li>Follow arrivals and attendance in real time</li>
+                        <li>Find out if a particular guest has showed up</li>
+                        <li>Precise stats of presence</li>
+                      </ul>
+                    {% endeditable_long_text %}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      
-      <div id="slideshow-link" class="navigation">
-        <ul class="thumbs noscript">
-          <li>
-            <a href="#presentation-1" class="thumb" title="Title #1" rel="history">
-              {{ "slideshow-image/thumbs/slide-1.png" || theme_image_tag: 'alt:Guest list for your event' }}
-            </a>
-            <div class="caption">
-              <div class="image-title">
-                <h3>
-                  {% editable_short_text "mobichekin_first_slide_title", hint: "mobichekin_first_slide_title", priority: 1, fixed: true %}
-                    MobiCheckin enables you to :
-                  {% endeditable_short_text %}
-                </h3>
-              </div>
-              <div class="image-desc">
-                {% editable_long_text "first_slide_desc", hint: "first_slide_desc", priority: 1, fixed: true %}
-                  <ul>
-                    <li>Welcome guests on iPad and iPhone</li>
-                    <li>Manage guest lists, badges and invites online</li>
-                    <li>Monitor arrivals in real-time</li>
-                  </ul>
-                {% endeditable_long_text %}
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#presentation-2" class="thumb" title="Title #2" rel="history">
-              {{ "slideshow-image/thumbs/slide-2.png" || theme_image_tag: 'alt:MobiCheckin scan your guest badges with QR Codes' }}
-            </a>
-            <div class="caption">
-              <div class="image-title">
-                <h3>
-                  {% editable_short_text "mobichekin_second_slide_title", hint: "mobichekin_second_slide_title", priority: 1, fixed: true %}
-                    Use your iDevice to :
-                  {% endeditable_short_text %}
-                </h3>
-              </div>
-              <div class="image-desc">
-                {% editable_long_text "second_slide_desc", hint: "second_slide_desc", priority: 1, fixed: true %}
-                  <ul>
-                    <li>Check guest in the list on arrival</li>
-                    <li>Scan invitation QR code</li>
-                    <li>Select the point of entry</li>
-                  </ul>
-                {% endeditable_long_text %}
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#presentation-3" class="thumb" title="Title #3" rel="history">
-              {{ "slideshow-image/thumbs/slide-3.png" || theme_image_tag: 'alt:Excel import/export, custom badges' }}
-            </a>
-            <div class="caption">
-              <div class="image-title">
-                <h3>
-                  {% editable_short_text "mobichekin_third_slide_title", hint: "mobichekin_third_slide_title", priority: 1, fixed: true %}
-                    Prepare your guest list online :
-                  {% endeditable_short_text %}
-                </h3>
-              </div>
-              <div class="image-desc">
-                {% editable_long_text "third_slide_desc", hint: "third_slide_desc", priority: 1, fixed: true %}
-                  <ul>
-                    <li>Easy import from XLS file</li>
-                    <li>Select badge and email templates</li>
-                    <li>Send email invitations with QR codes</li>
-                  </ul>
-                {% endeditable_long_text %}
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#presentation-4" class="thumb" title="Title #4" rel="history">
-              {{ "slideshow-image/thumbs/slide-4.png" || theme_image_tag: 'alt:Statistics, live feed of your event' }}
-            </a>
-            <div class="caption">
-              <div class="image-title">
-                <h3>
-                  {% editable_short_text "mobichekin_fourth_slide_title", hint: "mobichekin_fourth_slide_title", priority: 1, fixed: true %}
-                    Monitor your events smartly :
-                  {% endeditable_short_text %}
-                </h3>
-              </div>
-              <div class="image-desc">
-                {% editable_long_text "fourth_slide_desc", hint: "fourth_slide_desc", priority: 1, fixed: true %}
-                  <ul>
-                    <li>Follow arrivals and attendance in real time</li>
-                    <li>Find out if a particular guest has showed up</li>
-                    <li>Precise stats of presence</li>
-                  </ul>
-                {% endeditable_long_text %}
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
-</div>
-<div class="clear"></div>
-<div id="content">
-  <div id="body-intro">
-    <div class ="container">
+    <div class="clear"></div>
+    <div id="content">
+      <div id="body-intro">
+        <div class ="container">
+          <h3>
+            {% editable_short_text "access_control_title", hint: "access_control_title", priority: 1, fixed: true %}
+              MOBICHECKIN : More than 150,000 Guests checked-in with MobiCheckin!
+            {% endeditable_short_text %}
+          </h3>
+          <p>
+            {% editable_long_text "access_control_para", hint: "access_control_para", priority: 1, fixed: true %}
+              MobiCheckin is your best friend when it comes to managing guest list prior to and during your event. With MobiCheckin you can smartly use iPads and iPhones to replace paper guest lists and old barcode scanners. It works both offline and online with as many devices as you need. Plus, on Mobicheckin.com you will be able to prepare your event, create guest categories, custom badges and email templates, and monitor arrivals in real-time.<br><br>
+              MobiCheckin Beta version has served over 100 events in Europe and already checked in more than 150,000 guests.<br><br>
+              Our customers are event organizers (corporate, leisure, congresses, exhibitions) desiring to streamline welcome desks with a new way of welcoming guests.
+            {% endeditable_long_text %}
+          </p>
+          <div class ="container in_the_field">
+            <div class="row">
+              <div class="span12">
+                {{ "in_the_field/hostess.jpg" || theme_image_tag }}
+                {{ "in_the_field/mobicheckin_scan.jpg" || theme_image_tag }}
+                {{ "in_the_field/badges.jpg" || theme_image_tag }}
+                {{ "in_the_field/bornes.jpg" || theme_image_tag }}
+                {{ "in_the_field/event.jpg" || theme_image_tag }}
+                {{ "in_the_field/ipads.jpg" || theme_image_tag }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class ="container">
+      <div id="box">
+        <div class="row">
+          <div class ="span4">
+            <div class="description">
+              <h4>
+                {% editable_short_text "online_restration", hint: "online_restration", priority: 1, fixed: true %}
+                  Manage
+                {% endeditable_short_text %}
+              </h4>
+              <div class ="content-image">
+                {{ "box-registration-image.png" || theme_image_tag: 'alt:mobicheckin box information on the registration' }}
+              </div>
+              <p class="content">
+                {% editable_long_text "restration_access", hint: "restration_access", priority: 1, fixed: true %}
+                  Create your event online, and try our smart guest import to invite guests. Then send customized badges and email invitations with QR codes to your guests.
+                {% endeditable_long_text %}
+              </p>
+              <p>
+                <a href="/en/pages/features#access_point" class="btn btn-learn">
+                  {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                    MORE ...
+                  {% endeditable_short_text %}
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class ="span4">
+            <div class="description">
+              <h4>
+                {% editable_short_text "application_mobil", hint: "application_mobil", priority: 1, fixed: true %}
+                  Check-in
+                {% endeditable_short_text %}
+              </h4>
+              <div class ="content-image">
+                {{ "box-access-image.png" || theme_image_tag: 'alt:mobicheckin box information on the access control' }}
+              </div>
+              <p class="content">
+                {% editable_long_text "quick_access_control", hint: "quick_access_control", priority: 1, fixed: true %}
+                  Download your guest list and points of entry on your iPad or iPhone. Select your point of entry, and do the check-in. You can either scan your guest QR code, either find him or her in the list.
+                {% endeditable_long_text %}
+              </p>
+              <p>
+                <a href="/en/pages/features#access_control" class="btn btn-learn">
+                  {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                    MORE ...
+                  {% endeditable_short_text %}
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class ="span4 ">
+            <div class="description last">
+              <h4>
+                {% editable_short_text "statistical_event", hint: "statistical_event", priority: 1, fixed: true %}
+                  Monitor
+                {% endeditable_short_text %}
+              </h4>
+              <div class ="content-image">
+                {{ "box-statistical-image.png" || theme_image_tag: 'alt:mobicheckin box information statistical' }}
+              </div>
+              <p class="content">
+                {% editable_long_text "data_access", hint: "data_access", priority: 1, fixed: true %}
+                  Monitor arrivals on your device, find guests who already checked-in, and get full analytics for your event.
+                {% endeditable_long_text %}
+              </p>
+              <p>
+                <a href="/en/pages/features#statistics" class="btn btn-learn">
+                  {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
+                    MORE ...
+                  {% endeditable_short_text %}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="testimonials">
+        <div class="container">
+          <div class="clear"></div>
+        </div>
+    </div>
+    </div>
+    <div class="clear"></div>
+    <div class="container clients">
       <h3>
-        {% editable_short_text "access_control_title", hint: "access_control_title", priority: 1, fixed: true %}
-          MOBICHECKIN : More than 150,000 Guests checked-in with MobiCheckin!
+        {% editable_short_text "our_clients", hint: "our_clients", priority: 1, fixed: true %}
+          MobiCheckin is used by :
         {% endeditable_short_text %}
       </h3>
-      <p>
-        {% editable_long_text "access_control_para", hint: "access_control_para", priority: 1, fixed: true %}
-          MobiCheckin is your best friend when it comes to managing guest list prior to and during your event. With MobiCheckin you can smartly use iPads and iPhones to replace paper guest lists and old barcode scanners. It works both offline and online with as many devices as you need. Plus, on Mobicheckin.com you will be able to prepare your event, create guest categories, custom badges and email templates, and monitor arrivals in real-time.<br><br>
-          MobiCheckin Beta version has served over 100 events in Europe and already checked in more than 150,000 guests.<br><br>
-          Our customers are event organizers (corporate, leisure, congresses, exhibitions) desiring to streamline welcome desks with a new way of welcoming guests.
-        {% endeditable_long_text %}
-      </p>
-      <div class ="container in_the_field">
-        <div class="row">
-          <div class="span12">
-            {{ "in_the_field/hostess.jpg" || theme_image_tag }}
-            {{ "in_the_field/mobicheckin_scan.jpg" || theme_image_tag }}
-            {{ "in_the_field/badges.jpg" || theme_image_tag }}
-            {{ "in_the_field/bornes.jpg" || theme_image_tag }}
-            {{ "in_the_field/event.jpg" || theme_image_tag }}
-            {{ "in_the_field/ipads.jpg" || theme_image_tag }}
-          </div>
+      <div class="row">
+        <div class="span12">
+          <a href="http://www.apec.fr">
+            {{ "clients/apec.jpg" || theme_image_tag 'alt:apec' }}
+          </a>
+          <a href="http://www.gl-events.com">
+            {{ "clients/glevents.jpg" || theme_image_tag 'alt:glevents' }}
+          </a>
+          <a href="http://www.lepublicsysteme.com">
+            {{ "clients/lepublicsysteme.jpg" || theme_image_tag 'alt:lepublicsysteme' }}
+          </a>
+          <a href="http://www.essec.edu">
+            {{ "clients/essec.jpg" || theme_image_tag 'alt:essec' }}
+          </a>
+          <a href="http://www.escpeurope.eu">
+            {{ "clients/escp.jpg" || theme_image_tag 'alt:escp' }}
+          </a>
+          <a href="http://www.l4m.fr">
+            {{ "clients/l4m.jpg" || theme_image_tag 'alt:l4m' }}
+          </a>
+          <a href="http://www.careerbuilder.com">
+            {{ "clients/careerbuilder.jpg" || theme_image_tag 'alt:careerbuilder' }}
+          </a>
+          <a href="http://www.arittcentre.fr">
+            {{ "clients/aritt.jpg" || theme_image_tag 'alt:aritt' }}
+          </a>
+          <a href="http://www.bfair.fr">
+            {{ "clients/bfair.jpg" || theme_image_tag 'alt:bfair' }}
+          </a>
+          <a href="http://www.centrefrance-evenements.com">
+            {{ "clients/centrefranceevenements.jpg" || theme_image_tag 'alt:centrefranceevenements' }}
+          </a>
+          <a href="http://www.groupesolutions.fr">
+            {{ "clients/infopromotions.jpg" || theme_image_tag 'alt:infopromotions' }}
+          </a>
+          <a href="http://www.spas-expo.com">
+            {{ "clients/spas.jpg" || theme_image_tag 'alt:spas' }}
+          </a>
+          <a href="http://www.binsfeld.lu">
+            {{ "clients/binsfeld.jpg" || theme_image_tag 'alt:binsfeld' }}
+          </a>
+          <a href="http://www.ey.com">
+            {{ "clients/ernst&young.jpg" || theme_image_tag 'alt:ernst&young' }}
+          </a>
+          <a href="http://www.optic2000.com">
+            {{ "clients/optic2000.jpg" || theme_image_tag 'alt:optic2000' }}
+          </a>
+          <a href="http://www.openhive.eu">
+            {{ "clients/openhive.jpg" || theme_image_tag 'alt:openhive' }}
+          </a>
+          <a href="http://www.starwoodhotels.com">
+            {{ "clients/starwood.jpg" || theme_image_tag 'alt:starwood' }}
+          </a>
+          <a href="http://www.magicgarden-agency.com">
+            {{ "clients/magicgarden.jpg" || theme_image_tag 'alt:magicgarden' }}
+          </a>
+          <a href="http://www.agencenewyork.fr">
+            {{ "clients/agencenewyork.jpg" || theme_image_tag 'alt:agencenewyork' }}
+          </a>
+          <a href="http://www.sensation.fr">
+            {{ "clients/sensation.jpg" || theme_image_tag 'alt:sensation' }}
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class ="container">
-  <div id="box">
-    <div class="row">
-      <div class ="span4">
-        <div class="description">
-          <h4>
-            {% editable_short_text "online_restration", hint: "online_restration", priority: 1, fixed: true %}
-              Manage
+    <div id="footer">
+      <div class="container">
+        <div class="footer-div newsletters span4">
+          <h4 class="first">
+            {% editable_short_text "newsletters_title", hint: "newsletters_title", priority: 1, fixed: true %}
+              WEEKLY NEWSLETTERS
             {% endeditable_short_text %}
           </h4>
-          <div class ="content-image">
-            {{ "box-registration-image.png" || theme_image_tag: 'alt:mobicheckin box information on the registration' }}
-          </div>
-          <p class="content">
-            {% editable_long_text "restration_access", hint: "restration_access", priority: 1, fixed: true %}
-              Create your event online, and try our smart guest import to invite guests. Then send customized badges and email invitations with QR codes to your guests.
+          <p>
+            {% editable_long_text "newsletters_paragraphe", hint: "newsletters_paragraphe", priority: 1, fixed: true %}
+              Be one of the receivers of our weekly newsletters, news, updates and success stories about MobiCheckin!
             {% endeditable_long_text %}
           </p>
-          <p>
-            <a href="/en/pages/features#access_point" class="btn btn-learn">
-              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
-                MORE ...
-              {% endeditable_short_text %}
-            </a>
-          </p>
-        </div>
-      </div>
-      <div class ="span4">
-        <div class="description">
-          <h4>
-            {% editable_short_text "application_mobil", hint: "application_mobil", priority: 1, fixed: true %}
-              Check-in
-            {% endeditable_short_text %}
-          </h4>
-          <div class ="content-image">
-            {{ "box-access-image.png" || theme_image_tag: 'alt:mobicheckin box information on the access control' }}
+          <div class="row">
+            <div class="span4">
+              <div id="mc_embed_signup">
+                <form accept-charset="UTF-8" action="http://applidget.us4.list-manage.com/subscribe/post" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" target="_blank">
+                  <div style="margin:0;padding:0;display:inline">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input name="authenticity_token" type="hidden" value="m/drx8f2OSvYa6ztbEdn9UXHvesWFV7X31IxsDvr7k4=">
+                  </div>
+                  <div class="indicates-required">
+                    <div class="mc-field-group input-append">
+                      <div id="mce-EMAIL-controls">
+                        <div class="controls">
+                          <input id="u" name="u" type="hidden" value="e6b43f0d1cea595d9e6bae088">
+                          <input id="id" name="id" type="hidden" value="da9c15d72b">
+                          <input class="input-newsletter focused required email" id="MERGE0" name="MERGE0" 
+                          placeholder="{% editable_short_text 'placeholder_newsletter', hint: 'placeholder_newsletter', priority: 1, fixed: true %} enter your email address {% endeditable_short_text %}" type="text">
+                          <input id="EMAILTYPE" name="EMAILTYPE" type="hidden" value="html">
+                          <input class="btn btn-info btn-newsletter" id="mc-embedded-subscribe" name="commit" type="submit" value="{% editable_short_text 'btn_subscribe', hint: 'btn_subscribe', priority: 1, fixed: true %} SUSCRIBE {% endeditable_short_text %}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <p class="content">
-            {% editable_long_text "quick_access_control", hint: "quick_access_control", priority: 1, fixed: true %}
-              Download your guest list and points of entry on your iPad or iPhone. Select your point of entry, and do the check-in. You can either scan your guest QR code, either find him or her in the list.
-            {% endeditable_long_text %}
-          </p>
-          <p>
-            <a href="/en/pages/features#access_control" class="btn btn-learn">
-              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
-                MORE ...
+          <div class="networks span4">
+            <h4>
+              {% editable_short_text "networks_title", hint: "networks_title", priority: 1, fixed: true %}
+                STAY CONNECTED, FOLLOW US
               {% endeditable_short_text %}
-            </a>
-          </p>
-        </div>
-      </div>
-      <div class ="span4 ">
-        <div class="description last">
-          <h4>
-            {% editable_short_text "statistical_event", hint: "statistical_event", priority: 1, fixed: true %}
-              Monitor
-            {% endeditable_short_text %}
-          </h4>
-          <div class ="content-image">
-            {{ "box-statistical-image.png" || theme_image_tag: 'alt:mobicheckin box information statistical' }}
+            </h4>
+            <ul>
+              <li class="facebook"><a href="https://www.facebook.com/MobiCheckin" target="_blank">facebook</a></li>
+              <li class="twitter"><a href="https://twitter.com/MobiCheckin" target="_blank">twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/1834366" target="_blank">linkedin</a></li>
+              <li class="rss"><a href="http://blog.mobicheckin.com/rss.xml" target="_blank">rss</a></li>
+            </ul>
           </div>
-          <p class="content">
-            {% editable_long_text "data_access", hint: "data_access", priority: 1, fixed: true %}
-              Monitor arrivals on your device, find guests who already checked-in, and get full analytics for your event.
-            {% endeditable_long_text %}
-          </p>
-          <p>
-            <a href="/en/pages/features#statistics" class="btn btn-learn">
-              {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
-                MORE ...
-              {% endeditable_short_text %}
-            </a>
-          </p>
         </div>
+        <div class="clear"></div>
       </div>
     </div>
-  </div>
-  </div>
-</div>
-<div class ="container clients">
-  <h3>
-    {% editable_short_text "our_clients", hint: "our_clients", priority: 1, fixed: true %}
-      MobiCheckin is used by :
-    {% endeditable_short_text %}
-  </h3>
-  <div class="row">
-    <div class="span12">
-      <a href="http://www.apec.fr">
-        {{ "clients/apec.jpg" || theme_image_tag 'alt:apec' }}
-      </a>
-      <a href="http://www.gl-events.com">
-        {{ "clients/glevents.jpg" || theme_image_tag 'alt:glevents' }}
-      </a>
-      <a href="http://www.lepublicsysteme.com">
-        {{ "clients/lepublicsysteme.jpg" || theme_image_tag 'alt:lepublicsysteme' }}
-      </a>
-      <a href="http://www.essec.edu">
-        {{ "clients/essec.jpg" || theme_image_tag 'alt:essec' }}
-      </a>
-      <a href="http://www.escpeurope.eu">
-        {{ "clients/escp.jpg" || theme_image_tag 'alt:escp' }}
-      </a>
-      <a href="http://www.l4m.fr">
-        {{ "clients/l4m.jpg" || theme_image_tag 'alt:l4m' }}
-      </a>
-      <a href="http://www.careerbuilder.com">
-        {{ "clients/careerbuilder.jpg" || theme_image_tag 'alt:careerbuilder' }}
-      </a>
-      <a href="http://www.arittcentre.fr">
-        {{ "clients/aritt.jpg" || theme_image_tag 'alt:aritt' }}
-      </a>
-      <a href="http://www.bfair.fr">
-        {{ "clients/bfair.jpg" || theme_image_tag 'alt:bfair' }}
-      </a>
-      <a href="http://www.centrefrance-evenements.com">
-        {{ "clients/centrefranceevenements.jpg" || theme_image_tag 'alt:centrefranceevenements' }}
-      </a>
-      <a href="http://www.groupesolutions.fr">
-        {{ "clients/infopromotions.jpg" || theme_image_tag 'alt:infopromotions' }}
-      </a>
-      <a href="http://www.spas-expo.com">
-        {{ "clients/spas.jpg" || theme_image_tag 'alt:spas' }}
-      </a>
-      <a href="http://www.binsfeld.lu">
-        {{ "clients/binsfeld.jpg" || theme_image_tag 'alt:binsfeld' }}
-      </a>
-      <a href="http://www.ey.com">
-        {{ "clients/ernst&young.jpg" || theme_image_tag 'alt:ernst&young' }}
-      </a>
-      <a href="http://www.optic2000.com">
-        {{ "clients/optic2000.jpg" || theme_image_tag 'alt:optic2000' }}
-      </a>
-      <a href="http://www.openhive.eu">
-        {{ "clients/openhive.jpg" || theme_image_tag 'alt:openhive' }}
-      </a>
-      <a href="http://www.starwoodhotels.com">
-        {{ "clients/starwood.jpg" || theme_image_tag 'alt:starwood' }}
-      </a>
-      <a href="http://www.magicgarden-agency.com">
-        {{ "clients/magicgarden.jpg" || theme_image_tag 'alt:magicgarden' }}
-      </a>
-      <a href="http://www.agencenewyork.fr">
-        {{ "clients/agencenewyork.jpg" || theme_image_tag 'alt:agencenewyork' }}
-      </a>
-      <a href="http://www.sensation.fr">
-        {{ "clients/sensation.jpg" || theme_image_tag 'alt:sensation' }}
-      </a>
-    </div>
-  </div>
-</div>
-</div>
+    <!-- Le javascripts -->
+    {{ 'jquery.min' | javascript_tag }}
+    {{ 'bootstrap.min' | javascript_tag }}
+    {{ 'jquery.galleriffic' | javascript_tag }}
+    {{ 'jquery.opacityrollover' | javascript_tag }}
+    {{ 'slide' | javascript_tag }}
+    {{ 'validator' | javascript_tag }}
+  </body>
+</html>

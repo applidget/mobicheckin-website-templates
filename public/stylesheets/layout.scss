@@ -14,7 +14,7 @@ footer, header, hgroup, nav, section, audio, canvas, video {
 }
 
 body {
-  background-image: url(body-background.png);
+  background-image: url(../images/body-background.png);
   background-repeat: repeat;
   font-family: helvetica;
   color:$global-text;
@@ -55,7 +55,7 @@ body {
   }
 }
 .header-of-footer{
-  background-image: url(header-of-footer.jpg);
+  background-image: url(../images/header-of-footer.jpg);
   background-position:center;
   background-repeat:no-repeat;
   min-height:120px;
@@ -63,7 +63,7 @@ body {
 
 #footer {
   padding-top:2em !important;
-  background-image: url(footer-background.png);
+  background-image: url(../images/footer-background.png);
   min-height:300px;
   background-repeat: repeat;
   color:$footer-text;
@@ -145,22 +145,22 @@ body {
 
         li.facebook {
           margin-left: 0;   
-          background-image: url(icons/facebook.png);
+          background-image: url(../images/icons/facebook.png);
           background-repeat:no-repeat;
         }
 
         li.twitter {
-          background-image: url(icons/twitter.png);
+          background-image: url(../images/icons/twitter.png);
           background-repeat:no-repeat;
         }
 
         li.linkedin {
-          background-image: url(icons/linkedin.png);
+          background-image: url(../images/icons/linkedin.png);
           background-repeat:no-repeat;
         }
 
         li.rss {
-          background-image: url(icons/rss.png);
+          background-image: url(../images/icons/rss.png);
           background-repeat:no-repeat;
         }
         a {

@@ -30,7 +30,7 @@
 
 @mixin background-position($image, $position: center, $extension: png){
 	/*insert l'image a l'endroit voulu (les . ne st pas gérer par sass d où la décomposition)*/
-	background-image:url(#{$image}.#{$extension});
+	background-image:url(../images/#{$image}.#{$extension});
 	background-repeat:no-repeat;
 	background-position:$position;
 }
@@ -111,13 +111,13 @@
 
 @mixin background-center($image){
 	/*permet de centrer l'inmage  de fond l image est toujours centrer quelque soit la taille du navigateur */
-	background: url(#{$image}.jpg) no-repeat center center fixed;
+	background: url(../images/#{$image}.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.#{$image}.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$image}.jpg', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/#{$image}.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/#{$image}.jpg', sizingMethod='scale')";
 }
 
 @mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-right){

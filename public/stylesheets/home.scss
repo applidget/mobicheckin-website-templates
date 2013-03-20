@@ -37,7 +37,7 @@
 						white-space: nowrap;
 						list-style:none;
 						padding:6px 0 4px 32px;
-						background: url(slideshow-image/liste-style.png) no-repeat;
+						background: url(../images/slideshow-image/liste-style.png) no-repeat;
 						background-position: left center;	
 					}			
 				}
@@ -63,7 +63,7 @@
 		}
 	}
 	#box{
-		background-image:url(box-background.jpg);
+		background-image:url(../images/box-background.jpg);
 		background-size:120%;
 		background-repeat:no-repeat;
 		background-color:#F9F9F9;
@@ -104,7 +104,7 @@
 #testimonials{
 	margin-bottom:2em;
 	padding-bottom:1.1em;
-	background-image:url(testimonials-ombre.png);
+	background-image:url(../images/testimonials-ombre.png);
 	background-repeat:no-repeat;
 	background-position:bottom; 
 	#testimonials-content{
