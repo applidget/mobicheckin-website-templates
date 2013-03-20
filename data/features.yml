@@ -1,0 +1,20 @@
+Feature 1:
+  summary: test de sommaire
+  body: test de contenu
+  picture: /images/icon.png
+  published:  true
+Feature 2:
+  summary: test de sommaire
+  body: test de contenu
+  picture: /images/icon.png
+  published:  true
+Feature 3:
+  summary: test de sommaire
+  body: test de contenu
+  picture: /images/icon.png
+  published:  true
+Feature 4:
+  summary: test de sommaire
+  body: test de contenu
+  picture: /images/icon.png
+  published:  true

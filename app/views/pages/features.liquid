@@ -1,0 +1,18 @@
+{% extends index %}
+
+{% block 'inner-page' %}
+
+  {% with_scope published: true %}
+
+    {% for object in contents.features %}
+  
+      {{ object.name }}
+      {{ object.summary }}
+      {{ object.body }}
+      {{ object.picture }}
+
+    {% endfor %}
+
+  {% endwith_scope %}
+
+{% endblock %}
