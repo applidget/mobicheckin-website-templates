@@ -14,9 +14,14 @@ site:
     - "features" :
         title: "Features"
         published: true
+    - features/content_type_template:
+        templatized: true
+        published: true
+        model: features
+        title: Template of a feature
     - "events" :
         title: "Events"
-        published: false
+        published: true
     - "pricing" :
         title: "Pricing"
         published: true
