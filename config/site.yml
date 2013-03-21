@@ -16,7 +16,12 @@ site:
         published: true
     - "events" :
         title: "Events"
-        published: false
+        published: true
+    - events/content_type_template:
+        templatized: true
+        published: true
+        model: eventstype
+        title: Template of an event
     - "pricing" :
         title: "Pricing"
         published: true

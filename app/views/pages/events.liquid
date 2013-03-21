@@ -1,0 +1,53 @@
+{% extends index %}
+
+{% block 'inner-page' %}
+
+<div id="features">
+  <div class="container">
+    <h1>
+      {% editable_short_text "event_title", hint: "event_title", priority: 1, fixed: true %}
+        Events
+      {% endeditable_short_text %}
+    </h1>
+    <div>
+      <div class="row-fluid feature">
+        {% editable_long_text "event_desc", hint: "event_desc", priority: 1, fixed: true %}
+          Suspendisse pharetra justo in purus feugiat rutrum. Vivamus id commodo lectus. Donec laoreet ante a neque vestibulum eu pretium risus varius. Sed rhoncus, est eget laoreet placerat, dui magna bibendum purus, eu facilisis nunc erat id ante. Duis fringilla orci sit amet elit aliquam quis pulvinar nunc laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam in tincidunt massa. Nam risus eros, tempus et vestibulum ut, bibendum sed tellus. Curabitur non eros felis. Duis vel pulvinar dolor. Maecenas malesuada ante sodales est tristique ornare. Praesent id fringilla odio. Nam sodales dolor in lacus faucibus et elementum metus egestas. Nam et ipsum sed lacus dignissim hendrerit vitae id risus. Nullam faucibus aliquam metus, vel accumsan justo eleifend sed.
+        {% endeditable_long_text %}
+      </div>
+      
+      <div>
+        <h3>
+          {% editable_short_text "eventstype_title", hint: "eventstype_title", priority: 1, fixed: true %}
+            Events type :
+          {% endeditable_short_text %}
+        </h3>
+
+        <ul>
+        {% with_scope published: true %}
+          {% for object in contents.eventstype %}
+            <li><a href="/events/{{ object._permalink }}">{{ object.name }}</a></li>
+          {% endfor %}
+        {% endwith_scope %}
+        </ul>
+      </div>
+
+    </div> 
+    <div>
+      <div id="quick-action" style="text-align: center">
+        <a href="https://app.mobicheckin.com/en/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
+          {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
+            Try Online Demo
+          {% endeditable_short_text %}
+        </a>
+        <a href="https://app.mobicheckin.com/en/users/sign_up" class="btn btn-info btn-larger">
+          {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
+            Sign up for Free
+          {% endeditable_short_text %}
+        </a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+{% endblock %}

@@ -1,0 +1,36 @@
+Salon pro:
+  zone1: zone1
+  zone2: zone2
+  zone3: zone3
+  logoreference1: img
+  quotereference1: awesome
+  logoreference2: img
+  quotereference2: beau
+  logoreference3: img
+  quotereference3: Nice
+  example: example
+  published: true
+Salon tt public:
+  zone1: zone1
+  zone2: zone2
+  zone3: zone3
+  logoreference1: img
+  quotereference1: awesome
+  logoreference2: img
+  quotereference2: beau
+  example: example
+  published: true
+Corpo:
+  zone1: zone1
+  zone2: zone2
+  zone3: zone3
+  logoreference1: img
+  quotereference1: awesome
+  example: example
+  published: true
+Test:
+  zone1: zone1
+  zone2: zone2
+  zone3: zone3
+  example: example
+  published: true

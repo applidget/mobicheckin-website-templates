@@ -7096,4 +7096,9 @@ h2 {
   margin-left: 4em;
   border: none; }
 
+.event-reference {
+  text-align: center; }
+  .event-reference img {
+    display: inline-block; }
+
 /* @import "scaffolds"; */
