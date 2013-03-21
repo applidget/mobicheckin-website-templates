@@ -5,27 +5,17 @@
 <div id="features">
   <div class="container">
     <h1>
-      {% editable_short_text "features_title", hint: "features_title", priority: 1, fixed: true %}
-        Features
-      {% endeditable_short_text %}
+      {{ feature.name }}
     </h1>
     <div>
-
-      {% with_scope published: true %}
-        {% for object in contents.features %}
-          <div class="row-fluid feature" id="badges">
-            <div class="span7 {% cycle 'group 1': '', 'pull-right' %}">
-              {{ object.picture.url | image_tag }}
-            </div>
-            <div class="span5 content">
-              <h2>{{ object.name }}</h2>
-              <p>{{ object.summary }}</p>
-              <a class="pull-right" href="/features/{{ object._permalink }}">MORE ...</a>
-            </div> 
-          </div>
-        {% endfor %}
-      {% endwith_scope %}
-
+      <div class="row-fluid feature" id="badges">
+        <div class="span7">
+          {{ feature.picture.url | image_tag }}
+        </div>
+        <div class="span5 content">
+          <p>{{ feature.body }}</p>
+        </div> 
+      </div>
     </div> 
     <div>
       <div id="quick-action" style="text-align: center">
