@@ -16,12 +16,12 @@
         {% endeditable_long_text %}
       </div>
       
-      <div>
+      <div class="row-fluid feature event-list">
         <h3>
           {% editable_short_text "eventstype_title", hint: "eventstype_title", priority: 1, fixed: true %}
             Events type :
           {% endeditable_short_text %}
-        </h3>
+        </h3><br>
 
         <ul>
         {% with_scope published: true %}

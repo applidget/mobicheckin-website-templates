@@ -20,34 +20,34 @@
       {% if eventstype.logoreference1.url != nil and eventstype.logoreference2.url != nil and eventstype.logoreference3.url != nil %}
         <div class="row-fluid feature">
           <div class="span4 event-reference">
-            {{ eventstype.logoreference1.url | image_tag }}<br>
-            {{ eventstype.quotereference1 }}
+            {{ eventstype.logoreference1.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference1 }}"
           </div>
           <div class="span4 event-reference">
-            {{ eventstype.logoreference2.url | image_tag }}<br>
-            {{ eventstype.quotereference2 }}
+            {{ eventstype.logoreference2.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference2 }}"
           </div>
           <div class="span4 event-reference">
-            {{ eventstype.logoreference3.url | image_tag }}<br>
-            {{ eventstype.quotereference3 }}
+            {{ eventstype.logoreference3.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference3 }}"
           </div>
         </div>
       {% elsif eventstype.logoreference1.url != nil and eventstype.logoreference2.url != nil and eventstype.logoreference3.url == nil %}
         <div class="row-fluid feature">
           <div class="span6 event-reference">
-            {{ eventstype.logoreference1.url | image_tag }}<br>
-            {{ eventstype.quotereference1 }}
+            {{ eventstype.logoreference1.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference1 }}"
           </div>
           <div class="span6 event-reference">
-            {{ eventstype.logoreference2.url | image_tag }}<br>
-            {{ eventstype.quotereference2 }}
+            {{ eventstype.logoreference2.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference2 }}"
           </div>
         </div>
       {% elsif eventstype.logoreference1.url != nil and eventstype.logoreference2.url == nil and eventstype.logoreference3.url == nil %}
         <div class="row-fluid feature">
           <div class="span12 event-reference">
-            {{ eventstype.logoreference1.url | image_tag }}<br>
-            {{ eventstype.quotereference1 }}
+            {{ eventstype.logoreference1.url | image_tag }}<br><br>
+            "{{ eventstype.quotereference1 }}"
           </div>
         </div>
       {% endif %}
