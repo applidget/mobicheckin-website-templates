@@ -1,0 +1,31 @@
+name: Features
+description: Contains all MobiCheckin's features
+order_by: _position
+slug: features
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    hint: Feature's name
+    localized: true
+- summary:
+    label: Summary
+    type: text
+    text_formatting: html
+    hint: Feature's summary for the general feature page
+    localized: true
+- body:
+    label: Body
+    type: text
+    text_formatting: html
+    hint: Feature's description
+    localized: true
+- picture:
+    label: Picture
+    type: file
+    hint: Feature's illustration
+- published:
+    label: Published
+    type: boolean
+    localized: true
