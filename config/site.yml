@@ -27,6 +27,9 @@ site:
         published: true
         model: eventstype
         title: Template of an event
+    - "references" :
+        title: "References"
+        published: true
     - "pricing" :
         title: "Pricing"
         published: true

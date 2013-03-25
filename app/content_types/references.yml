@@ -1,0 +1,40 @@
+name: References
+description: Contains all MobiCheckin's references
+order_by: _position
+slug: references
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    hint: reference's name (image's alt tag)
+    localized: true
+- logo:
+    label: Logo
+    type: file
+    hint: Reference's logo
+- category:
+    label: Category
+    type: select
+    hint: reference's category
+    select_options:
+     - tradeshows
+     - corporates customers
+     - communication and event organizers
+     - public administrations
+     - congresses
+     - academics customers
+     - proudly working alongside
+    localized: true
+- tradeshowtype:
+    label: Tradeshows or Organiser
+    type: select
+    hint: references's type (work only for tradeshows category)
+    select_options:
+     - organiser
+     - tradeshow
+    localized: true
+- published:
+    label: Published
+    type: boolean
+    localized: true
