@@ -31,10 +31,10 @@ site:
         title: "References"
         published: true
     - "pricing" :
-        title: "Pricing"
+        title: "Plans & Pricing"
         published: true
     - "devis" :
-        title: "Devis"
+        title: "Contact us"
         published: true
     - "404":
         title: "Page not found"

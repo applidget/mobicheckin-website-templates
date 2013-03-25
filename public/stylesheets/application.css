@@ -6762,7 +6762,7 @@ body {
           -moz-transition: color 0.1s ease-in;
           -webkit-transition: color 0.1s ease-in;
           transition: color 0.1s ease-in; }
-      #top-bar ul li a.selected {
+      #top-bar ul li.active a {
         border-bottom: 3px #cccccc solid; }
 
 .header-of-footer {
