@@ -28,10 +28,10 @@ site:
         model: eventstype
         title: Template of an event
     - "pricing" :
-        title: "Pricing"
+        title: "Plans & Pricing"
         published: true
     - "devis" :
-        title: "Devis"
+        title: "Contact us"
         published: true
     - "404":
         title: "Page not found"

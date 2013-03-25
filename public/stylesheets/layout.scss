@@ -48,8 +48,10 @@ body {
           transition:color 0.1s ease-in;
         }
       }
-      a.selected {
-        border-bottom: 3px #CCC solid;
+      &.active {
+        a {
+          border-bottom: 3px #CCC solid;
+        }
       }
     }
   }
