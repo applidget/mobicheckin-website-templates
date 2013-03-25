@@ -22,6 +22,11 @@ site:
     - "events" :
         title: "Events"
         published: true
+    - events/content_type_template:
+        templatized: true
+        published: true
+        model: eventstype
+        title: Template of an event
     - "references" :
         title: "References"
         published: true

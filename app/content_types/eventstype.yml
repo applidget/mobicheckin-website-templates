@@ -1,0 +1,66 @@
+name: Events type
+description: Contains all MobiCheckin's events type
+order_by: _position
+slug: eventstype
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    hint: events-type's name
+    localized: true
+- zone1:
+    label: Zone1
+    type: text
+    text_formatting: html
+    hint: 1st part of the page
+    localized: true
+- zone2:
+    label: Zone2
+    type: text
+    text_formatting: html
+    hint: 2nd part of the page
+    localized: true
+- zone3:
+    label: Zone3
+    type: text
+    text_formatting: html
+    hint: 3rd part of the page
+    localized: true
+- logoreference1:
+    label: Picture
+    type: file
+    hint: 1st reference's logo
+- quotereference1:
+    label: 1st quote
+    type: text
+    hint: 1st reference's quote
+    localized: true
+- logoreference2:
+    label: Picture
+    type: file
+    hint: 2nd reference's logo
+- quotereference2:
+    label: 2nd quote
+    type: text
+    hint: 2nd reference's quote
+    localized: true
+- logoreference3:
+    label: Picture
+    type: file
+    hint: 3rd reference's logo
+- quotereference3:
+    label: 3rd quote
+    type: text
+    hint: 3rd reference's quote
+    localized: true
+- example:
+    label: Example
+    type: text
+    text_formatting: html
+    hint: Example at the bottom of the page
+    localized: true
+- published:
+    label: Published
+    type: boolean
+    localized: true

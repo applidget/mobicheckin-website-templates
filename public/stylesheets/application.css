@@ -6672,7 +6672,7 @@ div.pagination span.ellipsis {
       width: 130px; }
     #pricing .plan-container .yes, #pricing .plan-container .no {
       text-indent: -9999px;
-      background: url("yesno.png");
+      background: url("../images/yesno.png");
       display: inline-block;
       width: 16px;
       height: 16px;
@@ -7120,3 +7120,22 @@ ul.references {
 
 div.referencesblock {
   text-align: center; }
+
+.event-reference {
+  text-align: center; }
+  .event-reference img {
+    display: inline-block; }
+
+.feature.event-list {
+  text-align: center; }
+  .feature.event-list h3, .feature.event-list ul {
+    display: inline-block; }
+  .feature.event-list h3 {
+    margin-bottom: 10px; }
+  .feature.event-list ul {
+    list-style: none; }
+    .feature.event-list ul li {
+      font-size: 15px;
+      padding: 7px 0; }
+
+/* @import "scaffolds"; */
