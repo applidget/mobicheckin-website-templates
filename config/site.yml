@@ -22,6 +22,9 @@ site:
     - "events" :
         title: "Events"
         published: true
+    - "references" :
+        title: "References"
+        published: true
     - "pricing" :
         title: "Pricing"
         published: true
