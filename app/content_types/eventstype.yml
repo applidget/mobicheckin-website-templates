@@ -28,7 +28,7 @@ fields:
     hint: 3rd part of the page
     localized: true
 - logoreference1:
-    label: Picture
+    label: PictureRef1
     type: file
     hint: 1st reference's logo
 - quotereference1:
@@ -37,7 +37,7 @@ fields:
     hint: 1st reference's quote
     localized: true
 - logoreference2:
-    label: Picture
+    label: PictureRef2
     type: file
     hint: 2nd reference's logo
 - quotereference2:
@@ -46,7 +46,7 @@ fields:
     hint: 2nd reference's quote
     localized: true
 - logoreference3:
-    label: Picture
+    label: PictureRef3
     type: file
     hint: 3rd reference's logo
 - quotereference3:
