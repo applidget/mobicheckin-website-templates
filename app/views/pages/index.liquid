@@ -87,7 +87,7 @@
             <div id="slideshow-link" class="navigation">
               <ul class="thumbs noscript">
                 <li>
-                  <a href="/images/slideshow-image/slide-1.png" class="thumb" title="Title #1" rel="history" name="presentation-1">
+                  <a href="{{ 'slideshow-image/slide-1.png' || theme_image_url }}" class="thumb" title="Title #1" rel="history" name="presentation-1">
                     {{ "slideshow-image/thumbs/slide-1.png" || theme_image_tag: 'alt:Guest list for your event' }}
                   </a>
                   <div class="caption">
@@ -110,7 +110,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="/images/slideshow-image/slide-2.png" name="presentation-2" class="thumb" title="Title #2" rel="history">
+                  <a href="{{ 'slideshow-image/slide-2.png' || theme_image_url }}" name="presentation-2" class="thumb" title="Title #2" rel="history">
                     {{ "slideshow-image/thumbs/slide-2.png" || theme_image_tag: 'alt:MobiCheckin scan your guest badges with QR Codes' }}
                   </a>
                   <div class="caption">
@@ -133,7 +133,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="/images/slideshow-image/slide-3.png" name="presentation-3" class="thumb" title="Title #3" rel="history">
+                  <a href="{{ 'slideshow-image/slide-3.png' || theme_image_url }}" name="presentation-3" class="thumb" title="Title #3" rel="history">
                     {{ "slideshow-image/thumbs/slide-3.png" || theme_image_tag: 'alt:Excel import/export, custom badges' }}
                   </a>
                   <div class="caption">
@@ -156,7 +156,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="/images/slideshow-image/slide-4.png" name="presentation-4" class="thumb" title="Title #4" rel="history">
+                  <a href="{{ 'slideshow-image/slide-4.png' || theme_image_url }}" name="presentation-4" class="thumb" title="Title #4" rel="history">
                     {{ "slideshow-image/thumbs/slide-4.png" || theme_image_tag: 'alt:Statistics, live feed of your event' }}
                   </a>
                   <div class="caption">
