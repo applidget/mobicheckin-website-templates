@@ -7115,8 +7115,8 @@ ul.references {
       padding-left: 25px;
       background-color: #FFF; }
     ul.references li img {
-      max-width: 110px;
-      max-height: 110px; }
+      width: 110px;
+      height: 110px; }
 
 div.referencesblock {
   text-align: center; }
