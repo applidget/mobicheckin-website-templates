@@ -6586,7 +6586,7 @@ a.thumb:focus {
 
 ul.thumbs img {
   border: none;
-  width: 100%;
+  width: 70px;
   display: block; }
 
 div.pagination {
