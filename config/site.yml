@@ -27,6 +27,9 @@ site:
         published: true
         model: eventstype
         title: Template of an event
+    - "badges" :
+        title: "Badges"
+        published: true
     - "references" :
         title: "References"
         published: true
