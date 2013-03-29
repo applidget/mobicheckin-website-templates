@@ -6586,7 +6586,7 @@ a.thumb:focus {
 
 ul.thumbs img {
   border: none;
-  width: 100%;
+  width: 70px;
   display: block; }
 
 div.pagination {
@@ -7093,7 +7093,6 @@ h2 {
 #devis iframe {
   margin-top: 1em;
   margin-bottom: 2em;
-  margin-left: 4em;
   border: none; }
 
 ul.references {
@@ -7115,8 +7114,8 @@ ul.references {
       padding-left: 25px;
       background-color: #FFF; }
     ul.references li img {
-      max-width: 110px;
-      max-height: 110px; }
+      width: 110px;
+      height: 110px; }
 
 div.referencesblock {
   text-align: center; }
