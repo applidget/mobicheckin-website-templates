@@ -1,36 +1,37 @@
-Salon pro:
-  zone1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
-  zone2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
-  zone3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
-  logoreference1: clients/optic2000.jpg
-  quotereference1: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
-  logoreference2: clients/optic2000.jpg
-  quotereference2: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
-  logoreference3: clients/optic2000.jpg
-  quotereference3: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
-  example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
-  published: true
-Salon tt public:
-  zone1: zone1
-  zone2: zone2
-  zone3: zone3
-  logoreference1: clients/optic2000.jpg
-  quotereference1: awesome
-  logoreference2: clients/optic2000.jpg
-  quotereference2: beau
-  example: example
-  published: true
-Corpo:
-  zone1: zone1
-  zone2: zone2
-  zone3: zone3
-  logoreference1: clients/optic2000.jpg
-  quotereference1: awesome
-  example: example
-  published: true
-Test:
-  zone1: zone1
-  zone2: zone2
-  zone3: zone3
-  example: example
-  published: true
+- "Salon pro":
+    zone1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
+    zone2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
+    zone3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
+    logoreference1: clients/optic2000.jpg
+    quotereference1: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
+    logoreference2: clients/optic2000.jpg
+    quotereference2: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
+    logoreference3: clients/optic2000.jpg
+    quotereference3: "Proin ut ornare libero. Sed vitae nisi in eros volutpat semper. Nulla facilisi."
+    example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet enim. In hac habitasse platea dictumst. Nulla mattis porttitor nulla ut accumsan. Donec lacinia imperdiet placerat. Nulla nibh est, dapibus ac adipiscing at, elementum a sapien. Proin at libero lectus. Ut mollis pretium diam, ut consequat tellus aliquam sed. Donec id arcu eu turpis laoreet blandit id id diam."
+    published: true
+- "Salon tt public":
+    zone1: zone1
+    zone2: zone2
+    zone3: zone3
+    logoreference1: clients/optic2000.jpg
+    quotereference1: awesome
+    logoreference2: clients/optic2000.jpg
+    quotereference2: beau
+    example: example
+    published: true
+- "Corpo":
+    zone1: zone1
+    zone2: zone2
+    zone3: zone3
+    logoreference1: clients/optic2000.jpg
+    quotereference1: awesome
+    example: example
+    published: true
+- "Test":
+    zone1: zone1
+    zone2: zone2
+    zone3: zone3
+    example: example
+    published: true
+ 

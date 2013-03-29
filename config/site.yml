@@ -1,41 +1,7 @@
-site:
-  name: mobicheckin-website
+name: mobicheckin-website
 
-  locales: [en, fr]
+locales: [en, fr]
 
-  seo_title: mobicheckin-website
-  meta_keywords: "some meta keywords"
-  meta_description: "some meta description"
-
-  pages:
-    - "index": # page path (the template can edited here app/views/pages/index.liquid)
-        title: "Home page"
-        published: true
-    - "features" :
-        title: "Features"
-        published: true
-    - features/content_type_template:
-        templatized: true
-        published: true
-        model: features
-        title: Template of a feature
-    - "events" :
-        title: "Events"
-        published: true
-    - events/content_type_template:
-        templatized: true
-        published: true
-        model: eventstype
-        title: Template of an event
-    - "references" :
-        title: "References"
-        published: true
-    - "pricing" :
-        title: "Plans & Pricing"
-        published: true
-    - "devis" :
-        title: "Contact us"
-        published: true
-    - "404":
-        title: "Page not found"
-        published: true
+seo_title: mobicheckin-website
+meta_keywords: "some meta keywords"
+meta_description: "some meta description"
