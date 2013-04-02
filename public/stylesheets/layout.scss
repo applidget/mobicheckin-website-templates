@@ -56,6 +56,24 @@ body {
     }
   }
 }
+
+#sub-bar {
+  background-color:#E6E6E6;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    margin:auto;
+  
+    li {
+      display: inline-block;
+      margin: 0 15px;
+      height: 46px;
+      line-height: 46px;
+    }
+  }
+}
+
 .header-of-footer{
   background-image: url(../images/header-of-footer.jpg);
   background-position:center;

@@ -6765,6 +6765,18 @@ body {
       #top-bar ul li.active a {
         border-bottom: 3px #cccccc solid; }
 
+#sub-bar {
+  background-color: #E6E6E6;
+  text-align: center; }
+  #sub-bar ul {
+    display: inline-block;
+    margin: auto; }
+    #sub-bar ul li {
+      display: inline-block;
+      margin: 0 15px;
+      height: 46px;
+      line-height: 46px; }
+
 .header-of-footer {
   background-image: url(../images/header-of-footer.jpg);
   background-position: center;
