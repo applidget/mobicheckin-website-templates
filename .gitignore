@@ -9,3 +9,4 @@ public/stylesheets/bootstrap-responsive.css
 public/images/stickers-retina-*.png
 public/images/stickers-*.png
 log
+.push-tmp
