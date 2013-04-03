@@ -1,0 +1,157 @@
+---
+title: "References"
+published: true
+---
+{% extends index %}
+
+{% block 'inner-page' %}
+  <div id="features">
+    <div class="container">
+      <h1>
+        {% editable_short_text "references_title", hint: "references_title", priority: 1, fixed: true %}
+          References
+        {% endeditable_short_text %}
+      </h1>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "tradeshow_title", hint: "tradeshow_title", priority: 1, fixed: true %}
+                TRADESHOWS :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "tradeshows" %}
+                  <li {% if reference.tradeshowtype == 'tradeshow' %} class="{{ reference.tradeshowtype }}"{% endif %}>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "corporates_customers_title", hint: "corporates_customers_title", priority: 1, fixed: true %}
+                CORPORATES CUSTOMERS :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "corporates customers" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "communication_and_event_organizers_title", hint: "communication_and_event_organizers_title", priority: 1, fixed: true %}
+                COMMUNICATION AND EVENT ORGANIZERS :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "communication and event organizers" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "public_administrations_title", hint: "public_administrations_title", priority: 1, fixed: true %}
+                PUBLIC ADMINISTRATIONS :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "public administrations" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "congresses_title", hint: "congresses_title", priority: 1, fixed: true %}
+                CONGRESSES :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "congresses" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "academics_customers_title", hint: "academics_customers_title", priority: 1, fixed: true %}
+                ACADEMICS CUSTOMERS :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "academics customers" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="span12 feature">
+            <h3>
+              {% editable_short_text "proudly_working_alongside_title", hint: "proudly_working_alongside_title", priority: 1, fixed: true %}
+                PROUDLY WORKING ALONGSIDE :
+              {% endeditable_short_text %}
+            </h3>
+          </div>
+          <div class="span12 referencesblock">
+            <ul class="references clearfix">
+              {% for reference in contents.references %}
+                {% if reference.category == "proudly working alongside" %}
+                  <li>
+                    <img src="{{ reference.logo.url }}" alt="{{ reference.name }}">
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
