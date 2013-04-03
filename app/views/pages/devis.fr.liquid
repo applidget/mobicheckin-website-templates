@@ -2,18 +2,3 @@
 title: "Contact us"
 published: true
 ---
-{% extends index %}
-
-{% block 'inner-page' %}
-
-<div id="devis">
-  <div class="container">
-    <div class="span12 text-center">
-      {% editable_short_text "badges_form_url", hint: "badges_form_url", priority: 1, fixed: true %}
-        <iframe frameborder="0" height="1300" scrolling="none" src="https://applidget.wufoo.com/forms/mobicheckin-request-for-proposal/" width="800"></iframe>
-      {% endeditable_short_text %}
-    </div>
-  </div>
-</div>
-
-{% endblock %}
