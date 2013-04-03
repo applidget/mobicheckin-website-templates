@@ -1,140 +1,140 @@
-APEC:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-Cadres & co:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test1:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test2:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test3:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-test4:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-Cadres & co2:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-Cadres & co3:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test5:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-test6:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test8:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: tradeshow
-  published: true
-test9:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-test10:
-  logo: images/clients/apec.jpg
-  category: tradeshows
-  tradeshowtype: organiser
-  published: true
-test11:
-  logo: images/clients/apec.jpg
-  category: corporates customers
-  tradeshowtype: organiser
-  published: true
-test12:
-  logo: images/clients/apec.jpg
-  category: corporates customers
-  tradeshowtype: organiser
-  published: true
-test13:
-  logo: images/clients/apec.jpg
-  category: corporates customers
-  tradeshowtype: organiser
-  published: true
-test14:
-  logo: images/clients/apec.jpg
-  category: corporates customers
-  tradeshowtype: organiser
-  published: true
-test15:
-  logo: images/clients/apec.jpg
-  category: corporates customers
-  tradeshowtype: organiser
-  published: true
-test16:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test17:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test18:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test19:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test20:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test21:
-  logo: images/clients/apec.jpg
-  category: congresses
-  tradeshowtype: organiser
-  published: true
-test22:
-  logo: images/clients/apec.jpg
-  category: communication and event organizers
-  tradeshowtype: organiser
-  published: true
-test23:
-  logo: images/clients/apec.jpg
-  category: public administrations
-  tradeshowtype: organiser
-  published: true
-test24:
-  logo: images/clients/apec.jpg
-  category: academics customers
-  tradeshowtype: organiser
-  published: true
-test25:
-  logo: images/clients/apec.jpg
-  category: proudly working alongside
-  tradeshowtype: organiser
-  published: true
+- "APEC":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "Cadres & co":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test1":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test2":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test3":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "test4":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "Cadres & co2":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "Cadres & co3":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test5":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "test6":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test8":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: tradeshow
+    published: true
+- "test9":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "test10":
+    logo: images/clients/apec.jpg
+    category: tradeshows
+    tradeshowtype: organiser
+    published: true
+- "test11":
+    logo: images/clients/apec.jpg
+    category: corporates customers
+    tradeshowtype: organiser
+    published: true
+- "test12":
+    logo: images/clients/apec.jpg
+    category: corporates customers
+    tradeshowtype: organiser
+    published: true
+- "test13":
+    logo: images/clients/apec.jpg
+    category: corporates customers
+    tradeshowtype: organiser
+    published: true
+- "test14":
+    logo: images/clients/apec.jpg
+    category: corporates customers
+    tradeshowtype: organiser
+    published: true
+- "test15":
+    logo: images/clients/apec.jpg
+    category: corporates customers
+    tradeshowtype: organiser
+    published: true
+- "test16":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test17":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test18":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test19":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test20":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test21":
+    logo: images/clients/apec.jpg
+    category: congresses
+    tradeshowtype: organiser
+    published: true
+- "test22":
+    logo: images/clients/apec.jpg
+    category: communication and event organizers
+    tradeshowtype: organiser
+    published: true
+- "test23":
+    logo: images/clients/apec.jpg
+    category: public administrations
+    tradeshowtype: organiser
+    published: true
+- "test24":
+    logo: images/clients/apec.jpg
+    category: academics customers
+    tradeshowtype: organiser
+    published: true
+- "test25":
+    logo: images/clients/apec.jpg
+    category: proudly working alongside
+    tradeshowtype: organiser
+    published: true
