@@ -10,7 +10,7 @@ published: true
   <ul>
     {% with_scope published: true %}
       {% for object in contents.eventstype %}
-        <li><a href="/events/{{ object._permalink }}">{{ object.name }}</a></li>
+        <li><a href="/{{ locale }}/events/{{ object._permalink }}">{{ object.name }}</a></li>
       {% endfor %}
     {% endwith_scope %}
   </ul>
@@ -40,7 +40,7 @@ published: true
         <ul>
         {% with_scope published: true %}
           {% for object in contents.eventstype %}
-            <li><a href="/events/{{ object._permalink }}">{{ object.name }}</a></li>
+            <li><a href="/{{ locale }}/events/{{ object._permalink }}">{{ object.name }}</a></li>
           {% endfor %}
         {% endwith_scope %}
         </ul>
@@ -49,12 +49,12 @@ published: true
     </div> 
     <div>
       <div id="quick-action" style="text-align: center">
-        <a href="https://app.mobicheckin.com/en/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
+        <a href="https://app.mobicheckin.com/{{ locale }}/users/sign_in#auto_demo_sign_in" class="btn btn-larger btn-quick-tour">
           {% editable_short_text "try_demo", hint: "try_demo", priority: 1, fixed: true %}
             Try Online Demo
           {% endeditable_short_text %}
         </a>
-        <a href="https://app.mobicheckin.com/en/users/sign_up" class="btn btn-info btn-larger">
+        <a href="https://app.mobicheckin.com/{{ locale }}/users/sign_up" class="btn btn-info btn-larger">
           {% editable_short_text "create_account", hint: "create_account", priority: 1, fixed: true %}
             Sign up for Free
           {% endeditable_short_text %}
