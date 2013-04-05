@@ -229,11 +229,9 @@ published: true
                 <div class ="content-image">
                   {{ "box-registration-image.png" || theme_image_tag: 'alt:mobicheckin box information on the registration' }}
                 </div>
-                <p class="content">
-                  {% editable_long_text "restration_access", hint: "restration_access", priority: 1, fixed: true %}
-                    Create your event online, and try our smart guest import to invite guests. Then send customized badges and email invitations with QR codes to your guests.
-                  {% endeditable_long_text %}
-                </p>
+                {% editable_long_text "restration_access", hint: "restration_access", priority: 1, fixed: true %}
+                  Create your event online, and try our smart guest import to invite guests. Then send customized badges and email invitations with QR codes to your guests.
+                {% endeditable_long_text %}
                 <p>
                   <a href="/{{ locale }}/pages/features#access_point" class="btn btn-learn">
                     {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
@@ -253,11 +251,9 @@ published: true
                 <div class ="content-image">
                   {{ "box-access-image.png" || theme_image_tag: 'alt:mobicheckin box information on the access control' }}
                 </div>
-                <p class="content">
-                  {% editable_long_text "quick_access_control", hint: "quick_access_control", priority: 1, fixed: true %}
-                    Download your guest list and points of entry on your iPad or iPhone. Select your point of entry, and do the check-in. You can either scan your guest QR code, either find him or her in the list.
-                  {% endeditable_long_text %}
-                </p>
+                {% editable_long_text "quick_access_control", hint: "quick_access_control", priority: 1, fixed: true %}
+                  Download your guest list and points of entry on your iPad or iPhone. Select your point of entry, and do the check-in. You can either scan your guest QR code, either find him or her in the list.
+                {% endeditable_long_text %}
                 <p>
                   <a href="/{{ locale }}/pages/features#access_control" class="btn btn-learn">
                     {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
@@ -277,11 +273,9 @@ published: true
                 <div class ="content-image">
                   {{ "box-statistical-image.png" || theme_image_tag: 'alt:mobicheckin box information statistical' }}
                 </div>
-                <p class="content">
-                  {% editable_long_text "data_access", hint: "data_access", priority: 1, fixed: true %}
-                    Monitor arrivals on your device, find guests who already checked-in, and get full analytics for your event.
-                  {% endeditable_long_text %}
-                </p>
+                {% editable_long_text "data_access", hint: "data_access", priority: 1, fixed: true %}
+                  Monitor arrivals on your device, find guests who already checked-in, and get full analytics for your event.
+                {% endeditable_long_text %}
                 <p>
                   <a href="/{{ locale }}/pages/features#statistics" class="btn btn-learn">
                     {% editable_short_text "learn_more", hint: "learn_more", priority: 1, fixed: true %}
@@ -349,7 +343,7 @@ published: true
               {{ "clients/binsfeld.jpg" || theme_image_tag 'alt:binsfeld' }}
             </a>
             <a href="http://www.ey.com">
-              {{ "clients/ernst&young.jpg" || theme_image_tag 'alt:ernst&young' }}
+              {{ "clients/ernstyoung.jpg" || theme_image_tag 'alt:ernst&young' }}
             </a>
             <a href="http://www.optic2000.com">
               {{ "clients/optic2000.jpg" || theme_image_tag 'alt:optic2000' }}

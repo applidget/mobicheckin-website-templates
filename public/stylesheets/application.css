@@ -7015,13 +7015,13 @@ h2 {
       width: 150px;
       margin-right: auto;
       margin-left: auto; }
-    #content #box .description p.content {
+    #content #box .description p {
       text-align: justify;
-      width: auto;
-      min-height: 110px; }
+      width: auto; }
     #content #box .description p:last-child {
       text-align: right;
-      height: auto; }
+      height: auto;
+      margin-top: 20px; }
       #content #box .description p:last-child .btn-learn {
         color: #205a88; }
 
