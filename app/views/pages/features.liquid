@@ -31,7 +31,7 @@ published: true
             <div class="span7 {% cycle 'group 1': '', 'pull-right' %}">
               {{ object.picture.url | image_tag }}
             </div>
-            <div class="span5 content">
+            <div class="span5 content {% cycle 'group 2': '', 'feature-left' %}">
               <h2>{{ object.name }}</h2>
               <p>{{ object.summary }}</p>
               <a class="pull-right" href="/{{ locale }}/features/{{ object._permalink }}">MORE ...</a>

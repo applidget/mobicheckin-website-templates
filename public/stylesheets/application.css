@@ -7084,6 +7084,8 @@ h2 {
     border-top: 1px solid #919191; }
     #features .feature .right {
       text-align: right; }
+    #features .feature .feature-left {
+      margin-left: 0px; }
     #features .feature .content {
       text-align: justify; }
       #features .feature .content h2 {
