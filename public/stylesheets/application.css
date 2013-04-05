@@ -7082,6 +7082,8 @@ h2 {
   #features .feature {
     padding: 3em 0;
     border-top: 1px solid #919191; }
+    #features .feature ul {
+      margin-left: 25px; }
     #features .feature .right {
       text-align: right; }
     #features .feature .feature-left {
