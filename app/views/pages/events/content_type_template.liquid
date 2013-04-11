@@ -12,7 +12,7 @@ title: Template of an event
   <ul>
     {% with_scope published: true %}
       {% for object in contents.eventstype %}
-        <li><a href="/events/{{ object._permalink }}">{{ object.name }}</a></li>
+        <li><a href="/{{ locale }}/events/{{ object._permalink }}">{{ object.name }}</a></li>
       {% endfor %}
     {% endwith_scope %}
   </ul>
