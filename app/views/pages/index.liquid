@@ -34,8 +34,16 @@ published: true
           <ul class="nav">
             {% nav site, no_wrapper: true, active_class: 'active' %}
             <li><a href="http://blog.mobicheckin.com/">Blog</a></li>
-            <li><strong><a href="https://app.mobicheckin.com/{{ locale }}/users/sign_up">Sign up</a></strong></li>
-            <li><a href="https://app.mobicheckin.com/{{ locale }}/users/sign_in">Sign in</a></li>
+            <li><strong><a href="https://app.mobicheckin.com/{{ locale }}/users/sign_up">
+              {% editable_short_text "sign_up", hint: "sign_up", priority: 1, fixed: true %}
+                Sign up
+              {% endeditable_short_text %}
+            </a></strong></li>
+            <li><a href="https://app.mobicheckin.com/{{ locale }}/users/sign_in">
+              {% editable_short_text "sign_in", hint: "sign_in", priority: 1, fixed: true %}
+                Sign in
+              {% endeditable_short_text %}
+            </a></li>
             
           </ul>
         </div>
