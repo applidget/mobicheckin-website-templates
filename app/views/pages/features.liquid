@@ -34,7 +34,11 @@ published: true
             <div class="span5 content {% cycle 'group 2': '', 'feature-left' %}">
               <h2>{{ object.name }}</h2>
               <p>{{ object.summary }}</p>
-              <a class="pull-right" href="/{{ locale }}/features/{{ object._permalink }}">MORE ...</a>
+              <a class="pull-right" href="/{{ locale }}/features/{{ object._permalink }}">
+                {% editable_short_text "more_link", hint: "more_link", priority: 1, fixed: true %}
+                  More ...
+                {% endeditable_short_text %}
+              </a>
             </div> 
           </div>
         {% endfor %}
