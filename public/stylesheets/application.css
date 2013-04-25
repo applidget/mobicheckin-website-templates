@@ -6763,7 +6763,9 @@ body {
           -webkit-transition: color 0.1s ease-in;
           transition: color 0.1s ease-in; }
       #top-bar ul li.active a {
-        border-bottom: 3px #CCC solid; }
+        border-bottom: 3px #CCC solid;
+        box-shadow: none;
+        background: transparent; }
 
 #sub-bar {
   background-color: #E6E6E6;
