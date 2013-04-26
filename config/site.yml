@@ -1,6 +1,6 @@
 name: mobicheckin-website
 
-locales: [fr, en]
+locales: [en, fr]
 
 seo_title: mobicheckin-website
 meta_keywords: "some meta keywords"
