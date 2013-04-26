@@ -6,6 +6,12 @@ title: Template of an event
 ---
 {% extends index %}
 
+{% block 'meta-tag' %}
+  <title>{{ eventstype.seo_title }}</title>
+  <meta name="description" content="{{ eventstype.meta_description }}">
+  <meta name="keywords" content="{{ eventstype.meta_keywords }}" />
+{% endblock %}
+
 {% block 'inner-page' %}
 
 <div id="sub-bar" class="subbar">
