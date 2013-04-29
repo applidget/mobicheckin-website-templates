@@ -51,6 +51,8 @@ body {
       &.active {
         a {
           border-bottom: 3px #CCC solid;
+          box-shadow: none;
+          background: transparent;
         }
       }
     }
