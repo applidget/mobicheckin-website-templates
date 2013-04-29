@@ -6,10 +6,14 @@ published: true
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>{{ site.seo_title }}</title>
-    
     <meta charset="utf-8">
-    <meta name="description" content="{{ site.meta_description }}">
+
+    {% block 'meta-tag' %}
+      <title>{{ page.seo_title }}</title>
+      <meta name="description" content="{{ page.meta_description }}">
+      <meta name="keywords" content="{{ page.meta_keywords }}" />
+    {% endblock %}
+
     <meta name="author" content="Mobicheckin">
     <meta name="google-site-verification" content="lSur_uNy6-JQcjknKQ2NtDSuWNMqF-mRz28tPyqLPk0" />
     
@@ -23,6 +27,20 @@ published: true
     <link href="http://fonts.googleapis.com/css?family=Belgrano" rel="stylesheet" type="text/css">
 
     {{ 'application' | stylesheet_tag }}
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31011635-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </head>
   <body>
     <div id="top-bar" class="navbar navbar-fixed-top navbar-inverse">
