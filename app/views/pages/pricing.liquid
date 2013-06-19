@@ -282,23 +282,7 @@ published: true
             <tr>
               <td>
                 {% editable_short_text "technology_checkin", hint: "technology_checkin", priority: 1, fixed: true %}
-                  Guest check-in from list (iPad). Base option.
-                {% endeditable_short_text %}
-              </td>
-              <td class="credits-used">1</td>
-            </tr>
-            <tr>
-              <td>
-                {% editable_short_text "technology_registration_form", hint: "technology_registration_form", priority: 1, fixed: true %}
-                  Custom registration form for each guest category
-                {% endeditable_short_text %}
-              </td>
-              <td class="credits-used">1</td>
-            </tr>
-            <tr>
-              <td>
-                {% editable_short_text "technology_email", hint: "technology_email", priority: 1, fixed: true %}
-                  Scan a QR code or <a href="http://www.apple.com/ios/whats-new/#passbook">Apple Passbook</a> sent with a custom confirmation email.
+                  Registration form, Guest check-in from iPad list or QR Code scanning
                 {% endeditable_short_text %}
               </td>
               <td class="credits-used">1</td>
@@ -306,10 +290,42 @@ published: true
             <tr>
               <td>
                 {% editable_short_text "technology_badge", hint: "technology_badge", priority: 1, fixed: true %}
-                  E-badge with QR code. Customized PDF easily printable at home.
+                  E-badge with QR code. Customized PDF easily printable at home
                 {% endeditable_short_text %}
               </td>
-              <td class="credits-used">1</td>
+              <td class="credits-used">+1</td>
+            </tr>
+            <tr>
+              <td>
+                {% editable_short_text "technology_payment", hint: "technology_payment", priority: 1, fixed: true %}
+                  Payment (form) with promo codes. Invoicing integration (<a href="https://www.zoho.com/invoice/">Zoho</a>).
+                {% endeditable_short_text %}
+              </td>
+              <td class="credits-used">+1</td>
+            </tr>
+            <tr>
+              <td>
+                {% editable_short_text "technology_document", hint: "technology_document", priority: 1, fixed: true %}
+                  Document templates for your guests (Certificate of attendance, ...)
+                {% endeditable_short_text %}
+              </td>
+              <td class="credits-used">+1</td>
+            </tr>
+            <tr>
+              <td>
+                {% editable_short_text "technology_signature", hint: "technology_signature", priority: 1, fixed: true %}
+                  Guest signature at specific check-in points
+                {% endeditable_short_text %}
+              </td>
+              <td class="credits-used">1 / signature</td>
+            </tr>
+            <tr>
+              <td>
+                {% editable_short_text "technology_vip_notification", hint: "technology_vip_notification", priority: 1, fixed: true %}
+                  VIP Notification via SMS or Email
+                {% endeditable_short_text %}
+              </td>
+              <td class="credits-used">1 / notification</td>
             </tr>
           </table>
         </div>
