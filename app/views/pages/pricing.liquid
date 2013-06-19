@@ -30,15 +30,6 @@ published: true
             </div>
 
             <div class="plan">
-              <h3>Classic</h3>
-              <p>
-                {% editable_short_text "free", hint: "free", priority: 1, fixed: true %}
-                  Free
-                {% endeditable_short_text %}
-              </p>
-            </div>
-
-            <div class="plan">
               <h3>Pro</h3>
               <p>
                 {% editable_short_text "pay_as_you_go", hint: "pay_as_you_go", priority: 1, fixed: true %}
@@ -59,34 +50,12 @@ published: true
             <div class="column">
               <span class="yes">yes</span>
             </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "real_time_report", hint: "real_time_report", priority: 1, fixed: true %}
                 Real time report of attendance on the web platform
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
-          </div>
-          <div class="pricing-row">
-            <div class="feature">
-              {% editable_short_text "rsvp", hint: "rsvp", priority: 1, fixed: true %}
-                <a href="http://en.wikipedia.org/wiki/RSVP_%28invitations%29">RSVP</a>
-              {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="yes">yes</span>
             </div>
             <div class="column">
               <span class="yes">yes</span>
@@ -107,18 +76,12 @@ published: true
             <div class="column">
               <span class="yes">yes</span>
             </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "stats", hint: "stats", priority: 1, fixed: true %}
                 Stats report
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="yes">yes</span>
             </div>
             <div class="column">
               <span class="yes">yes</span>
@@ -139,18 +102,12 @@ published: true
             <div class="column">
               <span class="yes">yes</span>
             </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "registration_form", hint: "registration_form", priority: 1, fixed: true %}
                 Customized registration form
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="no">no</span>
             </div>
             <div class="column">
               <span class="no">no</span>
@@ -171,9 +128,6 @@ published: true
             <div class="column">
               <span class="yes">yes</span>
             </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
           </div>
           <div class="pricing-row">
             <div class="feature">
@@ -187,18 +141,12 @@ published: true
             <div class="column">
               <span class="yes">yes</span>
             </div>
-            <div class="column">
-              <span class="yes">yes</span>
-            </div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "qrcode_scan", hint: "qrcode_scan", priority: 1, fixed: true %}
                 QR Code scan for faster moving lines
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="no">no</span>
             </div>
             <div class="column">
               <span class="no">no</span>
@@ -217,9 +165,6 @@ published: true
               <span class="no">no</span>
             </div>
             <div class="column">
-              <span class="no">no</span>
-            </div>
-            <div class="column">
               <span class="yes">yes</span>
             </div>
           </div>
@@ -228,9 +173,6 @@ published: true
               {% editable_short_text "vip_notifications", hint: "vip_notifications", priority: 1, fixed: true %}
                 SMS/Email notifications when a VIP checks in. <a href="http://blog.mobicheckin.com/receive-a-text-message-sms-notification-when">Details</a>
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="no">no</span>
             </div>
             <div class="column">
               <span class="no">no</span>
@@ -249,9 +191,6 @@ published: true
               <span class="no">no</span>
             </div>
             <div class="column">
-              <span class="no">no</span>
-            </div>
-            <div class="column">
               <span class="yes">yes</span>
             </div>
           </div>
@@ -262,40 +201,25 @@ published: true
               {% endeditable_short_text %}
             </div>
             <div class="column">1200</div>
-            <div class="column">150</div>
             <div class="column" title="{% editable_short_text 'illimited_contact', hint: 'illimited_contact', priority: 1, fixed: true %}Illimited. Contact us for technical details.{% endeditable_short_text %}">&#8734;</div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "guest_categories", hint: "guest_categories", priority: 1, fixed: true %}
                 Guest categories
-              {% endeditable_short_text %} / 
+              {% endeditable_short_text %} /
               {% editable_short_text "Check-in Points", hint: "Check-in Points", priority: 1, fixed: true %}
                 Check-in Points
               {% endeditable_short_text %}
             </div>
             <div class="column">1 / 1</div>
-            <div class="column">1 / 1</div>
             <div class="column">100 / 1000</div>
-          </div>
-          <div class="pricing-row">
-            <div class="feature">
-              {% editable_short_text "events_you_can_create_and_manage", hint: "events_you_can_create_and_manage", priority: 1, fixed: true %}
-                Events you can create and manage
-              {% endeditable_short_text %}
-            </div>
-            <div class="column" title="{% editable_short_text 'illimited', hint: 'illimited', priority: 1, fixed: true %}Illimited.{% endeditable_short_text %}">&#8734;</div>
-            <div class="column"><strong>1</strong></div>
-            <div class="column" title="{% editable_short_text 'illimited', hint: 'illimited', priority: 1, fixed: true %}Illimited.{% endeditable_short_text %}">&#8734;</div>
           </div>
           <div class="pricing-row">
             <div class="feature">
               {% editable_short_text "phone_support", hint: "phone_support", priority: 1, fixed: true %}
                 English phone support 5/7, 9 a.m - 6 p.m. (CET)
               {% endeditable_short_text %}
-            </div>
-            <div class="column">
-              <span class="no">no</span>
             </div>
             <div class="column">
               <span class="no">no</span>
@@ -316,18 +240,10 @@ published: true
               </a>
             </div>
             <div class="column">
-              <h3>Classic</h3>
-              <a href="https://app.mobicheckin.com/{{ locale }}/events/plan" class="btn">
-                {% editable_short_text "create_account", hint: "create_account", priority: 1, fixed: true %}
-                  Sign up
-                {% endeditable_short_text %}
-              </a>
-            </div>
-            <div class="column">
               <h3>Pro</h3>
-              <a href="/devis" class="btn">
+              <a href="https://app.mobicheckin.com/{{ locale }}/events/plan" class="btn">
                 {% editable_short_text "contact_for_custom_plan", hint: "contact_for_custom_plan", priority: 1, fixed: true %}
-                  Contact us
+                  Sign up
                 {% endeditable_short_text %}
               </a>
             </div>
